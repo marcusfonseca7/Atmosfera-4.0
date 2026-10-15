@@ -1,0 +1,6 @@
+@use './pages/index' as *;
+@use './variables/index' as var; 
+
+body{
+    color: var.$blue;
+}
