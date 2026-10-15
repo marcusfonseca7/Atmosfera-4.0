@@ -13,14 +13,14 @@ public class AtuadoresDAO{
     public void CadastrarAtuadores(Atuadores atuadores ) throws SQLException {
       String sql = """
               
-              INSERT INTO atuadores(nome_atuadores status_atual,datetime) VALUES(?, ?, ?)
+              INSERT INTO atuadores(nome_atuadores, status_atual, ultimo_comando) VALUES(?, ?, ?)
               """;
 
       try(Connection connection =  Conexao.abrirConexao()){
           PreparedStatement comando =  connection.prepareStatement(sql);
           comando.setString(1,  atuadores.getNome_atuadores());
           comando.setString(2, String.valueOf(atuadores.getStatus_atual()));
-          comando.setString(3,String.valueOf(atuadores.getDatetime()));
+          comando.setString(3,String.valueOf(atuadores.getUltimo_comando()));
           comando.executeUpdate();
       }
   }

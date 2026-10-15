@@ -4,14 +4,14 @@ public class Atuadores {
     private int id_atuadores ;
     private  String nome_atuadores;
     private  Boolean status_atual;
-    private Float datetime;
+    private Float ultimo_comando;
 
 
-        public Atuadores(int id_atuadores, String nome_atuadores, Boolean status_atual, Float datetime) {
+        public Atuadores(int id_atuadores, String nome_atuadores, Boolean status_atual, Float ultimo_comando) {
         this.id_atuadores = id_atuadores;
         this.nome_atuadores = nome_atuadores;
         this.status_atual = status_atual;
-        this.datetime = datetime;
+        this.ultimo_comando = ultimo_comando;
     }
 
     public Atuadores(){}
@@ -43,11 +43,11 @@ public class Atuadores {
         this.status_atual = status_atual;
     }
 
-    public Float getDatetime() {
-        return datetime;
+    public Float getUltimo_comando() {
+        return ultimo_comando;
     }
 
-    public void setDatetime(Float datetime) {
-        this.datetime = datetime;
+    public void setUltimo_comando(Float datetime) {
+        this.ultimo_comando = ultimo_comando;
     }
 }
