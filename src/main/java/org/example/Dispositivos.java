@@ -1,27 +1,29 @@
 package org.example;
 
 public class Dispositivos {
-    private int id_dispotivo;
-    private String nome_dispositivo;
+    private int idDispotivo;
+    private String nomeDispositivo;
     private String localizacao;
-    private String tipo_dispositivo;
-    private int gateway_pai_fk;
+    private String tipoDispositivo;
+    private int gatewayPaiFk;
 
-
-    public int getId_dispotivo() {
-        return id_dispotivo;
+    public Dispositivos(int idDispositivos, String nomeDispositivo, boolean tipoDispositivo) {
     }
 
-    public void setId_dispotivo(int id_dispotivo) {
-        this.id_dispotivo = id_dispotivo;
+    public int getIdDispotivo() {
+        return idDispotivo;
     }
 
-    public String getNome_dispositivo() {
-        return nome_dispositivo;
+    public void setIdDispotivo(int idDispotivo) {
+        this.idDispotivo = idDispotivo;
     }
 
-    public void setNome_dispositivo(String nome_dispositivo) {
-        this.nome_dispositivo = nome_dispositivo;
+    public String getNomeDispositivo() {
+        return nomeDispositivo;
+    }
+
+    public void setNomeDispositivo(String nomeDispositivo) {
+        this.nomeDispositivo = nomeDispositivo;
     }
 
     public String getLocalizacao() {
@@ -32,19 +34,20 @@ public class Dispositivos {
         this.localizacao = localizacao;
     }
 
-    public String getTipo_dispositivo() {
-        return tipo_dispositivo;
+    public String getTipoDispositivo() {
+        return tipoDispositivo;
     }
 
-    public void setTipo_dispositivo(String tipo_dispositivo) {
-        this.tipo_dispositivo = tipo_dispositivo;
+    public void setTipoDispositivo(String tipoDispositivo) {
+        this.tipoDispositivo = tipoDispositivo;
     }
 
-    public int getGateway_pai_fk() {
-        return gateway_pai_fk;
+    public int getGatewayPaiFk() {
+        return gatewayPaiFk;
     }
 
-    public void setGateway_pai_fk(int gateway_pai_fk) {
-        this.gateway_pai_fk = gateway_pai_fk;
+    public void setGatewayPaiFk(int gatewayPaiFk) {
+        this.gatewayPaiFk = gatewayPaiFk;
     }
 }
+
