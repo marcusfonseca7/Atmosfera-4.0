@@ -10,7 +10,7 @@ import java.util.List;
 public class DispositivoDAO {
 
 
-    public void CadastrarAtuadores(Dispositivos dispositivos) throws SQLException {
+    public void CadastrarDispostivos(Dispositivos dispositivos) throws SQLException {
         String sql =
                 """
            INSERT INTO dispositivos(nome_dispostivo, localizacao, tipo_dispostivo, gateway_pai_fk) Values (?,?,?,?)
