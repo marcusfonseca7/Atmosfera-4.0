@@ -13,8 +13,8 @@ public class DispositivoDAO {
     public void CadastrarDispostivos(Dispositivos dispositivos) throws SQLException {
         String sql =
                 """
-           INSERT INTO dispositivos(nome_dispostivo, localizacao, tipo_dispostivo, gateway_pai_fk) Values (?,?,?,?)
-                          """;
+           INSERT INTO dispositivos(nome_dispositivo, localizacao, tipo_dispositivo, gateway_pai_fk) Values (?,?,?,?)
+           """;
 
 
         try (Connection connection = Conexao.abrirConexao();
@@ -35,7 +35,7 @@ public class DispositivoDAO {
 
     public List<Dispositivos> listar() throws SQLException {
 
-        String sql = "SELECT id_dispositivos, nome_dispositivo, tipo_dispositivo FROM dispotivos ORDER BY id_dispositivos DESC";
+        String sql = "SELECT id_dispositivo, nome_dispositivo, localizacao, tipo_dispositivo FROM dispotivos ORDER BY id_dispositivos DESC";
         List<Dispositivos> dispositivos = new ArrayList<>();
 
         try (Connection connection = Conexao.abrirConexao();
@@ -46,7 +46,9 @@ public class DispositivoDAO {
                 Dispositivos dispositivo = new Dispositivos(
                         resultado.getInt("id_dispositivos"),
                         resultado.getString("nome_dispositivo"),
-                        resultado.getBoolean("tipo_dispositivo")
+                        resultado.getString("localizacao"),
+                        resultado.getString("tipo_dispositivo"),
+                        resultado.getInt("gateway_pai_fk")
 
                 );
                 dispositivos.add(dispositivo); // Adiciona o objeto à lista

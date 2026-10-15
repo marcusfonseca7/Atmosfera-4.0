@@ -7,8 +7,15 @@ public class Dispositivos {
     private String tipoDispositivo;
     private int gatewayPaiFk;
 
-    public Dispositivos(int idDispositivos, String nomeDispositivo, String tipoDispositivo) {
+    public Dispositivos(int idDispotivo, String nomeDispositivo, String localizacao, String tipoDispositivo, int gatewayPaiFk) {
+        this.idDispotivo = idDispotivo;
+        this.nomeDispositivo = nomeDispositivo;
+        this.localizacao = localizacao;
+        this.tipoDispositivo = tipoDispositivo;
+        this.gatewayPaiFk = gatewayPaiFk;
     }
+
+    public Dispositivos() {}
 
     public int getIdDispotivo() {
         return idDispotivo;
