@@ -6,6 +6,17 @@ public class Atuadores {
     private  Boolean status_atual;
     private Float datetime;
 
+        public Atuadores(int id_atuadores, String nome_atuadores, Boolean status_atual, Float datetime) {
+        this.id_atuadores = id_atuadores;
+        this.nome_atuadores = nome_atuadores;
+        this.status_atual = status_atual;
+        this.datetime = datetime;
+    }
+
+    public Atuadores(){}
+
+
+
 
     public int getId_atuadores() {
         return id_atuadores;
