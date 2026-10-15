@@ -12,15 +12,15 @@ public class AtuadoresDAO{
 
     public void CadastrarAtuadores(Atuadores atuadores ) throws SQLException {
       String sql = """
-              
-              INSERT INTO atuadores(nome_atuadores, status_atual, ultimo_comando) VALUES(?, ?, ?)
+              INSERT INTO atuadores(nome_atuadores, status_atual, ultimo_comando, id_dispositivo_fk) VALUES(?, ?, ?, ?)
               """;
 
       try(Connection connection =  Conexao.abrirConexao()){
           PreparedStatement comando =  connection.prepareStatement(sql);
-          comando.setString(1,  atuadores.getNome_atuadores());
-          comando.setString(2, String.valueOf(atuadores.getStatus_atual()));
-          comando.setString(3,String.valueOf(atuadores.getUltimo_comando()));
+          comando.setString(1,  atuadores.getNomeAtuadores());
+          comando.setBoolean(2, atuadores.getStatusAtual());
+          comando.setString(3, String.valueOf(atuadores.getUltimoComando()));
+          comando.setString(4, String.valueOf(atuadores.getDispositivoFk()));
           comando.executeUpdate();
       }
   }
@@ -38,7 +38,8 @@ public class AtuadoresDAO{
                         resultado.getInt("id_atuadores"),
                         resultado.getString("nome_atuadores"),
                         resultado.getBoolean("status_atual"),
-                        resultado.getFloat("datetime")
+                        resultado.getTimestamp("ultimo_comando").toLocalDateTime(),
+                        resultado.getInt("id_dispositivo_fk")
 
                 );
 

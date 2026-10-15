@@ -1,53 +1,61 @@
 package org.example;
 
+import java.time.LocalDateTime;
+
 public class Atuadores {
-    private int id_atuadores ;
-    private  String nome_atuadores;
-    private  Boolean status_atual;
-    private Float ultimo_comando;
+    private int idAtuadores ;
+    private String nomeAtuadores;
+    private Boolean statusAtual;
+    private LocalDateTime ultimoComando;
+    private int dispositivoFk;
 
-
-        public Atuadores(int id_atuadores, String nome_atuadores, Boolean status_atual, Float ultimo_comando) {
-        this.id_atuadores = id_atuadores;
-        this.nome_atuadores = nome_atuadores;
-        this.status_atual = status_atual;
-        this.ultimo_comando = ultimo_comando;
+    public Atuadores(int idAtuadores, String nomeAtuadores, Boolean statusAtual, LocalDateTime ultimoComando, int dispositivoFk) {
+        this.idAtuadores = idAtuadores;
+        this.nomeAtuadores = nomeAtuadores;
+        this.statusAtual = statusAtual;
+        this.ultimoComando = ultimoComando;
+        this.dispositivoFk = dispositivoFk;
     }
 
     public Atuadores(){}
 
-
-
-
-    public int getId_atuadores() {
-        return id_atuadores;
+    public int getIdAtuadores() {
+        return idAtuadores;
     }
 
-    public void setId_atuadores(int id_atuadores) {
-        this.id_atuadores = id_atuadores;
+    public void setIdAtuadores(int idAtuadores) {
+        this.idAtuadores = idAtuadores;
     }
 
-    public String getNome_atuadores() {
-        return nome_atuadores;
+    public String getNomeAtuadores() {
+        return nomeAtuadores;
     }
 
-    public void setNome_atuadores(String nome_atuadores) {
-        this.nome_atuadores = nome_atuadores;
+    public void setNomeAtuadores(String nomeAtuadores) {
+        this.nomeAtuadores = nomeAtuadores;
     }
 
-    public Boolean getStatus_atual() {
-        return status_atual;
+    public Boolean getStatusAtual() {
+        return statusAtual;
     }
 
-    public void setStatus_atual(Boolean status_atual) {
-        this.status_atual = status_atual;
+    public void setStatusAtual(Boolean statusAtual) {
+        this.statusAtual = statusAtual;
     }
 
-    public Float getUltimo_comando() {
-        return ultimo_comando;
+    public LocalDateTime getUltimoComando() {
+        return ultimoComando;
     }
 
-    public void setUltimo_comando(Float datetime) {
-        this.ultimo_comando = ultimo_comando;
+    public void setUltimoComando(LocalDateTime ultimoComando) {
+        this.ultimoComando = ultimoComando;
+    }
+
+    public int getDispositivoFk() {
+        return dispositivoFk;
+    }
+
+    public void setDispositivoFk(int dispositivoFk) {
+        this.dispositivoFk = dispositivoFk;
     }
 }
