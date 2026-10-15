@@ -7,7 +7,7 @@ public class Dispositivos {
     private String tipoDispositivo;
     private int gatewayPaiFk;
 
-    public Dispositivos(int idDispositivos, String nomeDispositivo, boolean tipoDispositivo) {
+    public Dispositivos(int idDispositivos, String nomeDispositivo, String tipoDispositivo) {
     }
 
     public int getIdDispotivo() {
