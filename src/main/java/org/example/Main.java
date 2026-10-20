@@ -3,14 +3,17 @@ package org.example;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 
 import com.google.gson.Gson;
+import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import com.sun.net.httpserver.SimpleFileServer;
 
+import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.sql.SQLException;
+import java.util.Map;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -39,7 +42,7 @@ public class Main {
                 .normalize();   //limpa o endereço,removendo partes desnecessarias (ex> . e ...)
 
         if (!Files.isDirectory(pastaFronteand)){
-            throw new IllegalAccessException("Fronteand nao encontrado  em " + pastaFronteand);
+            throw new IllegalAccessException("Front-eand nao encontrado  em " + pastaFronteand);
         }
 
         HttpHandler arquivos = SimpleFileServer.createFileHandler(pastaFronteand);
@@ -63,8 +66,19 @@ public class Main {
     }
 
 
+    public static void visualizarDadosRecebidos(HttpExchange exchange)throws IOException{
+        if (!exchange.getRequestMethod().equals("GET")) {
+            responder(exchange, 405, Map.of(
+                    "Erro", "Use o metodo GET "
+            ));
+            return;
+            }
+
+        try{
+
+        };
 
 
-
-
+    }
+    }
 }
