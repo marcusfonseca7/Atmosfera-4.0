@@ -1,0 +1,67 @@
+// --- MOBILE ---
+// Mobile — cabeçalho e navegação
+$fs-mobile-brand: 15px;
+$fs-mobile-title: 24px;
+$fs-mobile-subtitle: 12px;
+$fs-mobile-filter: 11px;
+$fs-mobile-nav-label: 9px;
+
+// Mobile — indicadores
+$fs-mobile-indicator-label: 10px;
+$fs-mobile-indicator-value: 22px;
+$fs-mobile-indicator-description: 10px;
+$fs-mobile-environment-label: 11px; // Pressão, altitude e direção do vento
+$fs-mobile-environment-value: 26px;
+$fs-mobile-environment-description: 10px;
+
+// Mobile — seções e gráficos
+$fs-mobile-section-title: 16px;
+$fs-mobile-section-description: 11px;
+$fs-mobile-chart-legend: 10px;
+$fs-mobile-chart-axis-label: 8px;
+$fs-mobile-chart-axis-value: 9px;
+$fs-mobile-chart-caption: 10px;
+
+// Mobile — dispositivos
+$fs-mobile-device-name: 12px;
+$fs-mobile-device-location: 10px;
+$fs-mobile-device-last-record: 10px;
+$fs-mobile-device-reading-label: 9px;
+$fs-mobile-device-reading-value: 12px;
+
+// --- DESKTOP ---
+// Desktop — cabeçalho e navegação
+$fs-desktop-brand: 15px;
+$fs-desktop-title: 26px;
+$fs-desktop-subtitle: 12px;
+$fs-desktop-breadcrumb: 11px;
+$fs-desktop-utility-label: 11px;
+$fs-desktop-filter: 11px;
+$fs-desktop-connection-status: 11px;
+$fs-desktop-nav-label: 12px;
+$fs-desktop-network-status-title: 12px;
+$fs-desktop-network-status-description: 11px;
+
+// Desktop — indicadores
+$fs-desktop-indicator-label: 11px;
+$fs-desktop-indicator-value: 26px;
+$fs-desktop-indicator-description: 10px;
+$fs-desktop-environment-label: 11px;
+$fs-desktop-environment-value: 26px;
+$fs-desktop-environment-description: 10px;
+
+// Desktop — seções e gráficos
+$fs-desktop-section-title: 16px;
+$fs-desktop-section-description: 11px;
+$fs-desktop-chart-legend: 10px;
+$fs-desktop-chart-axis-label: 8px;
+$fs-desktop-chart-axis-value: 9px;
+$fs-desktop-chart-caption: 10px;
+
+// Desktop — tabela de dispositivos
+$fs-desktop-table-header: 9px;
+$fs-desktop-device-id: 10px;
+$fs-desktop-device-name: 11px;
+$fs-desktop-device-location: 10px;
+$fs-desktop-device-last-record: 11px;
+$fs-desktop-device-reading-value: 11px;
