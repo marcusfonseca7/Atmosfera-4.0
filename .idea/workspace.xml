@@ -5,24 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9402eb10-15b5-4582-b82d-78e62f745ddb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Atuadores.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AtuadoresDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Conexao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DispositivoDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Dispositivos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Registro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RegistroDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TesteDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/atmosfera.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/script.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/Atuadores.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/AtuadoresDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/Conexao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/DispositivoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/Dispositivos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/Registro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/RegistroDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/TesteDAO.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +77,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.TesteDAO.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Atmosfera-4.0 [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Atmosfera-4.0 [:org.example.TesteDAO.main()].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -82,7 +87,7 @@
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/38088233801/Downloads/mv/Atmosfera-4.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/38088233801.SESISENAI.003/Downloads/mv/Atmosfera-4.0&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -98,6 +103,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\38088233801\Downloads\mv\Atmosfera-4.0" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\38088233801.SESISENAI.003\Downloads\mv\Atmosfera-4.0" />
+    </key>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -108,6 +116,8 @@
       <updated>1792064641309</updated>
       <workItem from="1792064642723" duration="4829000" />
       <workItem from="1792069862572" duration="5455000" />
+      <workItem from="1792498553499" duration="192000" />
+      <workItem from="1792498761254" duration="44000" />
     </task>
     <servers />
   </component>
