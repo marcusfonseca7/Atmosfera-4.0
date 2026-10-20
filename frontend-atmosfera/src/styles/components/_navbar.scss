@@ -1,0 +1,17 @@
+@use '../variables/index' as var;
+@use '../mixins/index' as mix;
+@use '../responsivity/index' as resp;
+
+//MOBILE
+@media (min-width: resp.$mobile-breakpoint) {
+    nav{
+        
+    }
+}
+
+//DESKTOP
+@media (min-width: resp.$desktop-breakpoint) {
+    nav{
+        
+    }
+}
