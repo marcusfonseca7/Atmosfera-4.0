@@ -1,0 +1,55 @@
+// --- MOBILE ---
+// Mobile — estrutura e identidade
+$p-mobile-page: 24px 16px 16px;
+$p-mobile-brand-container: 18px 0;
+
+// Mobile — filtros
+$p-mobile-period-control: 4px;
+$p-mobile-period-filter: 10px 12px;
+$p-mobile-location-filter: 10px 12px;
+
+// Mobile — indicadores
+$p-mobile-indicator-card: 14px;
+$p-mobile-environment-card: 18px; // Pressão, altitude e direção do vento
+
+// Mobile — gráficos
+$p-mobile-temperature-chart-card: 20px;
+$p-mobile-wind-chart-card: 20px;
+$p-mobile-light-chart-card: 20px;
+$p-mobile-wifi-chart-card: 20px;
+
+// Mobile — dispositivos e navegação
+$p-mobile-devices-panel: 20px;
+$p-mobile-device-readings: 12px;
+$p-mobile-navigation: 12px;
+
+// --- DESKTOP ---
+// Desktop — estrutura e identidade
+$p-desktop-page: 16px;
+$p-desktop-sidebar: 16px;
+$p-desktop-brand-container: 18px 0;
+$p-desktop-main-content: 12px 0;
+
+// Desktop — navegação e status
+$p-desktop-nav-item: 12px;
+$p-desktop-network-status-card: 16px;
+
+// Desktop — filtros
+$p-desktop-period-control: 4px;
+$p-desktop-period-filter: 10px 12px;
+$p-desktop-location-filter: 10px 12px;
+
+// Desktop — indicadores
+$p-desktop-indicator-card: 18px;
+$p-desktop-environment-card: 18px;
+
+// Desktop — gráficos
+$p-desktop-temperature-chart-card: 20px;
+$p-desktop-wind-chart-card: 20px;
+$p-desktop-light-chart-card: 20px;
+$p-desktop-wifi-chart-card: 20px;
+
+// Desktop — dispositivos
+$p-desktop-devices-panel: 20px;
+$p-desktop-table-header: 12px 0;
+$p-desktop-table-row: 15px 0;
