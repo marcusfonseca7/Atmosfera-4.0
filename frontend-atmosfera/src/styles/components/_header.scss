@@ -1,0 +1,35 @@
+@use '../variables/index' as var;
+@use '../mixins/index' as mix;
+@use '../responsivity/index' as resp;
+
+//MOBILE
+@media (min-width: resp.$mobile-breakpoint) {
+    header {
+        display: flex;                  // <- Ativa o Flexbox (obrigatório para o space-between)
+        justify-content: space-between; // Empurra os elementos para as extremidades
+        align-items: center;            // Alinha os elementos verticalmente ao centro
+        width: 100%;                    // Garante que o header ocupe a largura total
+        background-color: antiquewhite;
+
+        padding:var.$p-mobile-period-control;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;            // Alinha ícone/texto da logo verticalmente
+        padding: var.$p-mobile-period-control;
+        // flex-direction: row; é o padrão do flex, pode omitir
+    }
+
+    #img-header {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+//DESKTOP
+@media (min-width: resp.$desktop-breakpoint) {
+    header{
+        background-attachment: fixed;
+    }
+}
