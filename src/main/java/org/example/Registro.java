@@ -2,7 +2,6 @@ package org.example;
 
 public class Registro {
     private int idRegistro;
-    private int dataHora;
     private float temperatura;
     private float umidade;
     private float pressao;
@@ -13,9 +12,8 @@ public class Registro {
     private int intensidadeWifi;
     private int idDispositivoFk;
 
-    public Registro(int idRegistro, int dataHora, float temperatura, float umidade, float pressao, float altitude, float luminosidade, float velocidadeVento, int direcaoVento, int intensidadeWifi, int idDispositivoFk) {
+    public Registro(int idRegistro, float temperatura, float umidade, float pressao, float altitude, float luminosidade, float velocidadeVento, int direcaoVento, int intensidadeWifi, int idDispositivoFk) {
         this.idRegistro = idRegistro;
-        this.dataHora = dataHora;
         this.temperatura = temperatura;
         this.umidade = umidade;
         this.pressao = pressao;
@@ -33,14 +31,6 @@ public class Registro {
 
     public void setIdRegistro(int idRegistro) {
         this.idRegistro = idRegistro;
-    }
-
-    public int getDataHora() {
-        return dataHora;
-    }
-
-    public void setDataHora(int dataHora) {
-        this.dataHora = dataHora;
     }
 
     public float getTemperatura() {
