@@ -26,7 +26,7 @@ public class RegistroDAO {
             comando.setFloat(5, registro.getLuminosidade());
             comando.setFloat(6, registro.getVelocidadeVento());
             comando.setObject(7, registro.getDirecaoVento());
-            comando.setObject(8, registro.getIntensidadeWifi()));
+            comando.setObject(8, registro.getIntensidadeWifi());
             comando.setObject(9, registro.getIdDispositivoFk());
 
             comando.executeUpdate();
