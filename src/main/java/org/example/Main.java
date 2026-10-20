@@ -36,16 +36,15 @@ public class Main {
         servidor.createContext("api/visualizar", Main::visualizarDadosRecebidos);
         servidor.createContext("api/inserir", Main:: inserirDados);
 
-        Path pastaFronteand = Path.of("")   //AQUI VAI SER O CAMINHO AONDE VAI SE LOCALIZAR O FRONT
-
+        Path pastaFrontend = Path.of("")   //AQUI VAI SER O CAMINHO AONDE VAI SE LOCALIZAR O FRONT
                 .toAbsolutePath() //Tranforma o caminho relativo em en
                 .normalize();   //limpa o endereço,removendo partes desnecessarias (ex> . e ...)
 
-        if (!Files.isDirectory(pastaFronteand)){
-            throw new IllegalAccessException("Front-eand nao encontrado  em " + pastaFronteand);
+        if (!Files.isDirectory(pastaFrontend)){
+            throw new IllegalAccessException("Front-end nao encontrado  em " + pastaFrontend);
         }
 
-        HttpHandler arquivos = SimpleFileServer.createFileHandler(pastaFronteand);
+        HttpHandler arquivos = SimpleFileServer.createFileHandler(pastaFrontend);
         servidor.createContext("/", exchange -> {
             if (exchange.getRequestURI().getPath().equals("/")){
                 exchange.getResponseHeaders().set("Location", "index.html");
@@ -75,10 +74,7 @@ public class Main {
             }
 
         try{
+    private static void inserirDados() {
 
-        };
-
-
-    }
     }
 }

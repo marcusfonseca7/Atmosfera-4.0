@@ -4,10 +4,31 @@
 
 //MOBILE
 @media (min-width: resp.$mobile-breakpoint) {
-    nav{
-        
+    nav.navbar-bottom-mobile{
+        border: 1px solid red;
+        padding: var.$p-mobile-navigation;
+
+        div.navbar-bottom-mobile-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div.nav-item{
+                @include mix.flex-center();
+                flex-direction: column;
+
+                img{
+                    width: 20px;
+                    filter: brightness(0) saturate(100%) invert(71%) sepia(6%) saturate(750%) hue-rotate(174deg) brightness(96%) contrast(92%);
+                }
+                p{
+                    font-size: var.$fs-mobile-nav-label;
+                }
+            }
+        }
     }
 }
+
 
 //DESKTOP
 @media (min-width: resp.$desktop-breakpoint) {

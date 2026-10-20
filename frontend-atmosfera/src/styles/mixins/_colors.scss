@@ -1,0 +1,5 @@
+@mixin setImgColor($color, $img-path){
+    background-color: $color;
+    mask: url($img-path) no-repeat center / contain;
+    -webkit-mask: url($img-path) no-repeat center / contain;
+}
