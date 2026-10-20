@@ -3,14 +3,17 @@ package org.example;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 
 import com.google.gson.Gson;
+import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import com.sun.net.httpserver.SimpleFileServer;
 
+import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.sql.SQLException;
+import java.util.Map;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -33,16 +36,15 @@ public class Main {
         servidor.createContext("api/visualizar", Main::visualizarDadosRecebidos);
         servidor.createContext("api/inserir", Main:: inserirDados);
 
-        Path pastaFronteand = Path.of("")   //AQUI VAI SER O CAMINHO AONDE VAI SE LOCALIZAR O FRONT
-
+        Path pastaFrontend = Path.of("")   //AQUI VAI SER O CAMINHO AONDE VAI SE LOCALIZAR O FRONT
                 .toAbsolutePath() //Tranforma o caminho relativo em en
                 .normalize();   //limpa o endereço,removendo partes desnecessarias (ex> . e ...)
 
-        if (!Files.isDirectory(pastaFronteand)){
-            throw new IllegalAccessException("Fronteand nao encontrado  em " + pastaFronteand);
+        if (!Files.isDirectory(pastaFrontend)){
+            throw new IllegalAccessException("Front-end nao encontrado  em " + pastaFrontend);
         }
 
-        HttpHandler arquivos = SimpleFileServer.createFileHandler(pastaFronteand);
+        HttpHandler arquivos = SimpleFileServer.createFileHandler(pastaFrontend);
         servidor.createContext("/", exchange -> {
             if (exchange.getRequestURI().getPath().equals("/")){
                 exchange.getResponseHeaders().set("Location", "index.html");
@@ -63,8 +65,16 @@ public class Main {
     }
 
 
+    public static void visualizarDadosRecebidos(HttpExchange exchange)throws IOException{
+        if (!exchange.getRequestMethod().equals("GET")) {
+            responder(exchange, 405, Map.of(
+                    "Erro", "Use o metodo GET "
+            ));
+            return;
+            }
 
+        try{
+    private static void inserirDados() {
 
-
-
+    }
 }
