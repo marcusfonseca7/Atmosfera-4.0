@@ -30,9 +30,6 @@ public class DispositivoDAO {
         }
     }
 
-
-
-
     public List<Dispositivos> listar() throws SQLException {
 
         String sql = "SELECT id_dispositivo, nome_dispositivo, localizacao, tipo_dispositivo FROM dispotivos ORDER BY id_dispositivos DESC";
