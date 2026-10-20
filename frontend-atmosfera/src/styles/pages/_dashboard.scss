@@ -1,0 +1,18 @@
+@use '../variables/index' as var;
+@use '../components/index' as comp;
+@use '../mixins/index' as mix;
+@use '../responsivity/index' as resp;
+
+//MOBILE
+@media (min-width: resp.$mobile-breakpoint) {
+    section.dashboard{
+        
+    }
+}
+
+//DESKTOP
+@media (min-width: resp.$desktop-breakpoint) {
+    section.dashboard{
+        
+    }
+}
