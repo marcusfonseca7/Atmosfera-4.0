@@ -1,5 +1,7 @@
-@forward 'border-radius.scss';
-@forward 'colors.scss';
-@forward 'font-sizes.scss';
-@forward 'gaps.scss';
-@forward 'paddings.scss';
+//Import all variables at once
+@forward './border-radius';
+@forward './borders';
+@forward './colors';
+@forward './font-sizes';
+@forward './margins';
+@forward './paddings';

@@ -1,19 +1,27 @@
 {
-  "name": "frontend-atmosfera",
+  "name": "sass-web-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite --host",
-    "build": "vite build"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierry-savio/pvs-template.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pierry-savio/pvs-template.git/issues"
+  },
+  "homepage": "https://github.com/pierry-savio/pvs-template#readme",
   "devDependencies": {
-    "sass": "^1.105.1",
+    "sass": "^1.105.2",
     "vite": "^8.3.4"
   }
 }

@@ -1,6 +1,4 @@
+//Importing all globals
+@use './global/index' as *;
+//Importing all pages
 @use './pages/index' as *;
-@use './variables/index' as var; 
-
-body{
-    color: var.$blue;
-}

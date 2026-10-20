@@ -5,11 +5,15 @@ node_modules/
 dist/
 dist-ssr/
 build/
+*.local
 
-# Variáveis de ambiente (podem ter chaves e senhas)
-.env
-.env.local
-.env.*.local
+# Cache do Vite e do TypeScript
+.vite/
+*.tsbuildinfo
+
+# Cache do Sass
+.sass-cache/
+*.css.map
 
 # Logs
 logs/
@@ -19,31 +23,30 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Cache
-.vite/
-.cache/
-.parcel-cache/
-.eslintcache
-.stylelintcache
-.sass-cache/
-*.tsbuildinfo
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
 
-# Arquivos CSS gerados pelo Sass (se você compilar manualmente)
-*.css.map
+# Cobertura de testes
+coverage/
 
-# Editor (VS Code)
+# VS Code (ignora tudo, exceto configs úteis para o time)
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
-.idea/
+!.vscode/launch.json
+!.vscode/tasks.json
 
 # Sistema operacional
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Arquivos temporários
-*.local
-*.swp
-*.tmp
-coverage/
+# Editores e arquivos temporários
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
