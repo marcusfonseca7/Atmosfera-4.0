@@ -3,11 +3,6 @@
 @use '../responsivity/index' as resp;
 
 //MOBILE
-
-
-img{
-    height:30px
-}
 @media (min-width: resp.$mobile-breakpoint) {
     header {
         color: var.$color-text-primary;
