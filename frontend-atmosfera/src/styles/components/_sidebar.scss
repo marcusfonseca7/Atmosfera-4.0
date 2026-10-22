@@ -5,19 +5,19 @@
 @media (min-width: resp.$mobile-breakpoint) {
   div.sidebar {
     position: fixed;
-    top: 54px;
+    top: 69px;
     right: 0;
     transform: translateX(0%);
 
     background: var.$color-bg-control;
     width: 60%;
+    max-width: 300px;
 
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     padding: var.$p-mobile-navigation + 20;
 
-    border-radius: 0 0 0 var.$radius-lg;
-    border-top: 1px solid var.$color-border-default;
+    border-radius: var.$radius-lg 0 0 var.$radius-lg;
 
     transition: 0.5s ease;
 

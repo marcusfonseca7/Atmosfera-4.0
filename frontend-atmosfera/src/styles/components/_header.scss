@@ -7,12 +7,11 @@
   header {
     position: fixed;
     color: var.$color-text-primary;
-    background-color: var.$color-bg-control;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: var.$p-mobile-location-filter;
+    padding: var.$p-mobile-navigation + 5px 20px;
     font-size: var.$fs-mobile-brand;
 
     .logo {

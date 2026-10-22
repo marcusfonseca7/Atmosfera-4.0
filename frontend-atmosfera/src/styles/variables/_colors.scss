@@ -2,54 +2,75 @@
 // 1. VARIÁVEIS CADASTRADAS (Variáveis existentes no sistema)
 // ==========================================================================
 
-$primary: #5FA8D3;       // Cor principal: ações, botões e elementos de destaque
-$background: #1B4965;    // Cor de fundo da interface ou de superfícies
-$border: #CAE9FF;        // Borda clara para contornos e separações
-$border-2: #62B6CB;      // Borda alternativa, com destaque intermediário
-$border-3: #053C5D;      // Borda escura para separações mais discretas
-$text: #BEE9E8;          // Cor de texto sobre fundos escuros
-$placeholders: #DBDBDB;  // Texto de exemplo ou indicação em campos vazios
-
+$primary: #5fa8d3; // Cor principal: ações, botões e elementos de destaque
+$background: #1b4965; // Cor de fundo da interface ou de superfícies
+$border: #cae9ff; // Borda clara para contornos e separações
+$border-2: #62b6cb; // Borda alternativa, com destaque intermediário
+$border-3: #053c5d; // Borda escura para separações mais discretas
+$text: #bee9e8; // Cor de texto sobre fundos escuros
+$placeholders: #dbdbdb; // Texto de exemplo ou indicação em campos vazios
 
 // ==========================================================================
 // 2. PALETA UTILIZADA NO DESIGN (Cores reais observadas no layout)
 // ==========================================================================
 
 // Cores Principais e Destaques
-$color-primary: #0075FF;    // Cor principal: botões, ícones e séries dos gráficos
-$color-accent: #2DD5F4;     // Destaque ciano: linhas dos gráficos, indicadores e complementos
+$color-primary: #0075ff; // Cor principal: botões, ícones e séries dos gráficos
+$color-accent: #2dd5f4; // Destaque ciano: linhas dos gráficos, indicadores e complementos
 
 // Tipografia / Textos
-$color-text-primary: #FFFFFF;    // Títulos, valores importantes e textos principais
-$color-text-secondary: #A0AEC0;  // Descrições, legendas e rótulos auxiliares
+$color-text-primary: #ffffff; // Títulos, valores importantes e textos principais
+$color-text-secondary: #a0aec0; // Descrições, legendas e rótulos auxiliares
 
 // Bordas e Linhas de Grade
-$color-border-default: #26365C;            // Bordas de filtros e divisores
-$color-chart-grid: rgba(#7897BF, 0.20);    // Linhas de grade dos gráficos (20% opacidade)
+$color-border-default: #26365c; // Bordas de filtros e divisores
+$color-chart-grid: rgba(
+  #7897bf,
+  0.2
+); // Linhas de grade dos gráficos (20% opacidade)
 
 // Fundos de Componentes e Navegação
-$color-bg-control: #080F29;                     // Fundo de filtros e seletor de período
-$color-bg-navigation: rgba(#060B26, 0.91);      // Fundo da navegação lateral (91% opacidade)
-$color-bg-selected: #1A2340;                    // Fundo do item de navegação selecionado
-$color-bg-network: #0C2351;                     // Fundo do bloco de status da rede
+$color-bg-control: #080f29; // Fundo de filtros e seletor de período
+$color-bg-navigation: rgba(
+  #060b26,
+  0.91
+); // Fundo da navegação lateral (91% opacidade)
+$color-bg-selected: #1a2340; // Fundo do item de navegação selecionado
+$color-bg-network: #0c2351; // Fundo do bloco de status da rede
 
 // Status e Indicadores
-$color-status-success: #05CD99;  // Conexão ativa, dispositivos online e indicadores positivos
-$color-status-warning: #FFC36A;  // Avisos e situações que precisam de atenção
-
+$color-status-success: #05cd99; // Conexão ativa, dispositivos online e indicadores positivos
+$color-status-warning: #ffc36a; // Avisos e situações que precisam de atenção
 
 // ==========================================================================
 // 3. DEGRADÊS E PREENCHIMENTOS (Gradients)
 // ==========================================================================
 
 // Fundo geral da interface
-$gradient-bg-main: linear-gradient(180deg, #0054BC 0%, #0A204D 50%, #060B26 100%);
+$gradient-bg-main: linear-gradient(
+  -45deg,
+  #060b26 0%,
+  #0d2e70 50%,
+  #060b26 100%
+);
 
 // Cards de indicadores
-$gradient-bg-card: linear-gradient(180deg, rgba(#080F2D, 0.95) 0%, rgba(#11264A, 0.93) 100%);
+$gradient-bg-card: linear-gradient(
+  180deg,
+  rgba(#080f2d, 0.95) 0%,
+  rgba(#11264a, 0.93) 100%
+);
 
 // Painéis de gráficos e tabelas
-$gradient-bg-panel: linear-gradient(180deg, rgba(#080E28, 0.96) 0%, rgba(#0C2042, 0.92) 100%);
+$gradient-bg-panel: linear-gradient(
+  180deg,
+  rgba(#080e28, 0.96) 0%,
+  rgba(#0c2042, 0.92) 100%
+);
 
 // Preenchimento de área sob as curvas dos gráficos
-$gradient-chart-area: linear-gradient(180deg, rgba(#0075FF, 0.33) 0%, rgba(#0075FF, 0) 100%);
+$gradient-chart-area: linear-gradient(
+  180deg,
+  rgba(#0075ff, 0.33) 0%,
+  rgba(#0075ff, 0) 100%
+);
