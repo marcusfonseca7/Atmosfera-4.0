@@ -58,3 +58,9 @@
     transform: translateX(100%);
   }
 }
+//DESKTOP
+@media (min-width: resp.$desktop-breakpoint) {
+  div.sidebar {
+    display: none;
+  }
+}
