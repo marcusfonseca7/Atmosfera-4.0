@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atmosfera 4.0 | Simulação</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="./index.html">
+        <img id="logo" src="../assets/images/favicon.png" alt="Logo Atmosfera" />
+        <p>ATMOSFERA 4.0</p>
+      </a>
+
+      <img id="img_header" src="../assets/icons/menu.png" alt="Abrir menu" />
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <a href="">
+        <div class="sidebar-item">
+          <img src="../assets/icons/home.png" alt="Início" />
+          <p>Dashboard</p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="sidebar-item">
+          <img src="../assets/icons/simulation.png" alt="Simulação" />
+          <p>Simulação</p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="sidebar-item">
+          <img src="../assets/icons/us.png" alt="Sobre nós" />
+          <p>Sobre nós</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="sidebar-desktop">
+      <a class="logotype" href="./index.html">
+        <img src="../assets/images/favicon.png" alt="🌍" />
+        <h1>ATMOSFERA 4.0</h1>
+      </a>
+
+      <div class="line"></div>
+
+      <div class="nav-container">
+        <a class="nav-item">
+          <img src="../assets/icons/home.png" alt="Home" />
+          <p>Dashboard</p>
+        </a>
+
+        <a class="nav-item active">
+          <img src="../assets/icons/simulation.png" alt="Simulação" />
+          <p>Simulação</p>
+        </a>
+
+        <a class="nav-item">
+          <img src="../assets/icons/us.png" alt="Sobre nós" />
+          <p>Sobre Nós</p>
+        </a>
+      </div>
+
+      <div class="connection-container">
+        <img src="../assets/icons/wifi.png" alt="Wifi" />
+        <h2>Campus conectado</h2>
+        <p>Dispositivos conectados e online em tempo real.</p>
+      </div>
+    </div>
+
+    <main>
+      <section class="simulation">
+        <div class="simulation__container">
+          <div class="simulation__header">
+            <span class="eyebrow">Monitoramento / simulação</span>
+            <h2>Simulação de dispositivos</h2>
+            <p>Configure um dispositivo virtual e acompanhe o envio de dados em tempo real.</p>
+          </div>
+
+          <div id="status" class="status-badge">
+            <span class="status-dot"></span>
+            <p>Não iniciado</p>
+          </div>
+
+          <div class="warning">
+            <img src="../assets/icons/warning.png" alt="Aviso" />
+            <p>Modo de demonstração: todos os dados foram gerados.</p>
+          </div>
+
+          <div class="device-panel">
+            <div class="device-panel__header">
+              <div class="icon-wrap">
+                <img src="../assets/icons/circuit.png" alt="Configuração do dispositivo" />
+              </div>
+              <p>Configurações do dispositivo</p>
+            </div>
+
+            <div class="device-info">
+              <div class="field">
+                <span>Nome do dispositivo</span>
+                <strong>Campos - 01 teste</strong>
+              </div>
+
+              <div class="field">
+                <span>Status da rede</span>
+                <strong>Conectado</strong>
+              </div>
+
+              <div class="field">
+                <span>Último envio</span>
+                <strong>Há 12 segundos</strong>
+              </div>
+            </div>
+
+            <div class="device-controls">
+              <div class="control-block">
+                <h3>Temperatura</h3>
+                <div class="control-grid">
+                  <div class="input-group">
+                    <label for="temp-min">Mínimo</label>
+                    <input id="temp-min" type="number" placeholder="°C" />
+                  </div>
+                  <div class="input-group">
+                    <label for="temp-max">Máximo</label>
+                    <input id="temp-max" type="number" placeholder="°C" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="control-block">
+                <h3>Umidade</h3>
+                <div class="control-grid">
+                  <div class="input-group">
+                    <label for="umidade-min">Mínimo</label>
+                    <input id="umidade-min" type="number" placeholder="%" />
+                  </div>
+                  <div class="input-group">
+                    <label for="umidade-max">Máximo</label>
+                    <input id="umidade-max" type="number" placeholder="%" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="control-block">
+                <h3>Pressão</h3>
+                <div class="control-grid">
+                  <div class="input-group">
+                    <label for="pressao-min">Mínimo</label>
+                    <input id="pressao-min" type="number" placeholder="hPa" />
+                  </div>
+                  <div class="input-group">
+                    <label for="pressao-max">Máximo</label>
+                    <input id="pressao-max" type="number" placeholder="hPa" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="control-block">
+                <h3>Altitude</h3>
+                <div class="control-grid">
+                  <div class="input-group">
+                    <label for="altitude-min">Mínimo</label>
+                    <input id="altitude-min" type="number" placeholder="m" />
+                  </div>
+                  <div class="input-group">
+                    <label for="altitude-max">Máximo</label>
+                    <input id="altitude-max" type="number" placeholder="m" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="control-block">
+                <h3>Direção do vento</h3>
+                <div class="control-grid">
+                  <div class="input-group">
+                    <label for="direcao-vento-min">Mínimo</label>
+                    <input id="direcao-vento-min" type="number" placeholder="°" />
+                  </div>
+                  <div class="input-group">
+                    <label for="direcao-vento-max">Máximo</label>
+                    <input id="direcao-vento-max" type="number" placeholder="°" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="control-block">
+                <h3>Velocidade do vento</h3>
+                <div class="control-grid">
+                  <div class="input-group">
+                    <label for="velocidade-vento-min">Mínimo</label>
+                    <input id="velocidade-vento-min" type="number" placeholder="km/h" />
+                  </div>
+                  <div class="input-group">
+                    <label for="velocidade-vento-max">Máximo</label>
+                    <input id="velocidade-vento-max" type="number" placeholder="km/h" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="control-block">
+                <h3>Luminosidade</h3>
+                <div class="control-grid">
+                  <div class="input-group">
+                    <label for="luminosidade-min">Mínimo</label>
+                    <input id="luminosidade-min" type="number" placeholder="lux" />
+                  </div>
+                  <div class="input-group">
+                    <label for="luminosidade-max">Máximo</label>
+                    <input id="luminosidade-max" type="number" placeholder="lux" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="button-group">
+                <button id="start-simulation" class="btn btn-primary">Iniciar simulação</button>
+                <button id="stop-simulation" class="btn btn-secondary">Parar simulação</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="navbar-bottom-mobile">
+      <div class="navbar-bottom-mobile-container">
+        <a href="">
+          <div class="nav-item">
+            <img src="../assets/icons/home.png" alt="Início" />
+            <p>Dashboard</p>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="nav-item">
+            <img src="../assets/icons/simulation.png" alt="Simulação" />
+            <p>Simulação</p>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="nav-item">
+            <img src="../assets/icons/us.png" alt="Sobre nós" />
+            <p>Sobre nós</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <script type="module" src="../scripts/main.js"></script>
+    <script type="module" src="../scripts/dom/sidebar.js"></script>
+  </body>
+</html>
