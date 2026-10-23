@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: var.$p-mobile-navigation + 5px 20px;
+    padding: var.$p-mobile-navigation + 10px 30px;
     font-size: var.$fs-mobile-brand;
 
     .logo {
@@ -22,11 +22,12 @@
       @include mix.font-1(700);
 
       img#logo {
-        width: 3cqh;
+        width: 40px;
       }
 
       p {
         color: var.$color-text-primary;
+        font-size: var.$fs-mobile-brand + 5;
       }
     }
 
