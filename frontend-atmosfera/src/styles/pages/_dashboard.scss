@@ -149,7 +149,7 @@
         grid-column: span 2;
       }
       div.data-item.chart-item{
-        justify-content: flex-start; // o data-item usa space-between, aqui não queremos
+        justify-content: flex-start;
 
         div.item-header{
           display: flex;
@@ -198,10 +198,76 @@
       }
     }
   }
+  div.devices-state{
+
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    background: var.$gradient-bg-card;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    border-radius: var.$radius-lg;
+
+    img{
+      width: 28px;
+    }
+    div.devices-header{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      h2{
+        font-size: 20px;
+        color: var.$color-text-primary;
+        font-weight: 800;
+      }
+      p{
+        font-size: 12px;
+        color: var.$color-text-secondary;
+      }
+    }
+
+    div.info-container{
+      img{
+        background-color: var.$color-primary;
+            padding: 4px;
+            border-radius: var.$radius-sm;
+      }
+      div.info-texts{
+        h3{
+
+        }
+        p{
+
+        }
+      }
+      p{
+
+      }
+
+    }
+
+    div.data-container{
+      div.data-column{
+        p{
+
+        }
+        h3{
+
+        }
+      }
+    }
+  }
 }
+
 //DESKTOP
 @media (min-width: resp.$desktop-breakpoint) {
   section.dashboard {
+    padding: 80px 100px 80px 420px;
+    border: 1px solid red;
   }
 }
 
