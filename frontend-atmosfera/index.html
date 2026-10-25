@@ -29,7 +29,7 @@
     </header>
 
     <!-- === SIDEBAR MOBILE === -->
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar closed" id="sidebar">
       <a href="">
         <div class="sidebar-item">
           <img src="./src/assets/icons/home.png" alt="Início" />
@@ -180,6 +180,7 @@
                 <p>Ventos à 175°</p>
               </div>
 
+              <!-- GRÁFICO TEMPERATURA -->
               <div class="data-item chart-item span2">
                 <div class="item-header">
                   <p>Temperatura &amp; umidade</p>
@@ -194,6 +195,37 @@
 
                 <div class="chart-box">
                   <canvas id="tempUmidChart"></canvas>
+                </div>
+              </div>
+
+              <!-- GRÁFICO VELOCIDADE DO VENTO -->
+              <div class="data-item chart-item span2">
+                <div class="item-header">
+                  <p>Velocidade do Vento</p>
+                  <img src="./src/assets/icons/wind.png" alt="Vento">
+                </div>
+                <p class="chart-sub">Tendência nas últimas 6 horas</p>
+
+                <div class="chart-legend">
+                  <span style="--c:#22d3ee">Série contínua</span>
+                  <span style="--c:#2563eb">Série tracejada</span>
+                </div>
+
+                <div class="chart-box">
+                  <canvas id="windSpeedChart"></canvas>
+                </div>
+              </div>
+
+              <!-- GRÁFICO LUMINOSIDADE POR ZONA -->
+              <div class="data-item chart-item span2">
+                <div class="item-header">
+                  <p>Luminosidade por Zona</p>
+                  <img src="./src/assets/icons/light.png" alt="Luminosidade">
+                </div>
+                <p class="chart-sub">Iluminância · Lux · Últimas 2 horas</p>
+
+                <div class="chart-box">
+                  <canvas id="luminosityChart"></canvas>
                 </div>
               </div>
 
@@ -240,6 +272,7 @@
     <script type="module" src="./src/scripts/main.js"></script>
     <script type="module" src="./src/scripts/dom/sidebar.js"></script>
     <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-    <script type="module" src="./src/scripts/graphics/graphic-temperature.js"></script>
+    <!--IMPORT DOS GRÁFICOS -->
+    <script type="module" src="./src/scripts/graphics/graphics.js"></script>
   </body>
 </html>
