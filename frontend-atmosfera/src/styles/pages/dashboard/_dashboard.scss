@@ -1,0 +1,29 @@
+@use "../../variables/index" as var;
+@use "../../components/index" as comp;
+@use "../../mixins/index" as mix;
+@use "../../responsivity/index" as resp;
+
+@forward './campus-data';
+@forward './devices-state';
+@forward './graphics';
+@forward './campus-header';
+
+@media (min-width: resp.$mobile-breakpoint) {
+  section.dashboard {
+    min-height: 100dvh;
+    background: var.$gradient-bg-main;
+    padding: var.$p-mobile-page;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+//DESKTOP
+@media (min-width: resp.$desktop-breakpoint) {
+  section.dashboard {
+    padding: 80px 100px 80px 312px + 100px;
+  }
+}
