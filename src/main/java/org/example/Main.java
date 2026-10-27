@@ -36,8 +36,8 @@ public class Main {
 
         HttpServer servidor = HttpServer.create(new InetSocketAddress(PORTA), 0);
 
-        servidor.createContext("api/visualizar", Main::visualizarDadosRecebidos);
-        servidor.createContext("api/inserir", Main::inserirDados);
+        servidor.createContext("/api/visualizar", Main::visualizarDadosRecebidos);
+        servidor.createContext("/api/inserir", Main::inserirDados);
 
         Path pastaFrontend = Path.of("")   //AQUI VAI SER O CAMINHO AONDE VAI SE LOCALIZAR O FRONT
                 .toAbsolutePath() //Tranforma o caminho relativo em en
@@ -62,7 +62,7 @@ public class Main {
         servidor.start();
 
         System.out.printf("Banco conectado com sucesso !!!");
-        System.out.printf("ATMOSFERA SENAI http://localhost: " + PORTA);
+        System.out.println("ATMOSFERA SENAI http://localhost:" + PORTA);
         System.out.printf("precione Ctrl + C para encerrar ");
     }
 
@@ -73,6 +73,8 @@ public class Main {
           * POR ULTIMO ELE EM UMA OUTRA LISTA JA COM OS DADOS TRATADOS */
 
     public static void visualizarDadosRecebidos(HttpExchange exchange) throws IOException {
+        if (preflight(exchange)) return;
+
         if (!exchange.getRequestMethod().equals("GET")) {
             responder(exchange, 405, Map.of("Erro", "Use o metodo GET "));
             return;}
@@ -87,7 +89,7 @@ public class Main {
 
             itemTratado.put("id", r.getIdRegistro());
             itemTratado.put("temperatura", r.getTemperatura() + "°C");
-            itemTratado.put("Umidade", r.getLuminosidade() +  "%");
+            itemTratado.put("Umidade", r.getUmidade() +  "%");
 
 
 
@@ -99,6 +101,11 @@ public class Main {
                 }
                 itemTratado.put("Luminosidade", r.getLuminosidade());
                  itemTratado.put("dispositivo", r.getIdDispositivoFk());
+                itemTratado.put("pressao", r.getPressao());
+                itemTratado.put("altitude", r.getAltitude());
+                itemTratado.put("velocidadeVento", r.getVelocidadeVento());
+                itemTratado.put("direcaoVento", r.getDirecaoVento());
+                itemTratado.put("intensidadeWifi", r.getIntensidadeWifi());
 
                  registrosTratados.add(itemTratado);
             }
@@ -113,6 +120,8 @@ public class Main {
 
 
     public static void inserirDados(HttpExchange exchange) throws IOException{
+
+        if (preflight(exchange)) return;
 
         if (!exchange.getRequestMethod().equals("POST")){
             responder(exchange, 405 , Map.of("erro", "Use o metodo POST"));
@@ -140,8 +149,26 @@ public class Main {
     }
 
 
+    private static void liberarCors(HttpExchange exchange) {
+        exchange.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
+        exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+        exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Content-Type");
+    }
+
+    private static boolean preflight(HttpExchange exchange) throws IOException {
+        liberarCors(exchange);
+        if (exchange.getRequestMethod().equals("OPTIONS")) {
+            exchange.sendResponseHeaders(204, -1);
+            exchange.close();
+            return true;
+        }
+        return false;
+    }
+
 
     private  static void responder(HttpExchange exchange, int status, Object conteudo)throws IOException{
+        liberarCors(exchange);
+
         byte[] resposta = GSON.toJson(conteudo).getBytes(StandardCharsets.UTF_8);
         exchange.getResponseHeaders().set("Content-Type", "application/json; charset=UTF8");
 
