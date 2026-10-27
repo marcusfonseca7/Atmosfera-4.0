@@ -87,6 +87,9 @@
 
     <main>
       <section class="dashboard">
+
+        <!-- HEADER -->
+
         <div class="campus-header">
           <h2>Campus escolar inteligente</h2>
           <p>Monitoramento ambiental - Tempo real</p>
@@ -116,158 +119,129 @@
           </div>
         </div>
 
-            <div class="campus-data">
-
-              <div class="data-item">
-                <div class="item-header">
-                  <p>Total de dispositivos</p>
-                  <img src="./src/assets/icons/web.png" alt="Web">
-                </div>
-                <h3>24</h3>
-                <p>Todos online</p>
+        <!-- CARDS -->
+        <div class="cards-container">
+          
+          <div class="part1">
+            
+            <!-- TOTAL DE DISPOSITIVOS -->
+            <div class="card">
+              
+              <div class="card-header">
+                <p>Total de dispositivos</p>
+                <img src="./src/assets/icons/circuit.png" alt="circuit">
               </div>
 
-              <div class="data-item">
-                <div class="item-header">
-                  <p>Atuadores ativos</p>
-                  <img src="./src/assets/icons/circuit.png" alt="Circuit">
-                </div>
-                <h3>5 / 24</h3>
-                <p>Sala 101 - A/C ativo a 70%</p>
-              </div>
+              <h2>01</h2>
 
-              <div class="data-item">
-                <div class="item-header">
-                  <p>Média do campus</p>
-                  <img src="./src/assets/icons/termometer.png" alt="Termômetro">
-                </div>
-                <h3>22,1 °C / 58%</h3>
-                <p>Temperatura/Umidade</p>
-              </div>
+              <p>Todos online</p>
 
-              <div class="data-item">
-                <div class="item-header">
-                  <p>Alertas críticos</p>
-                  <img src="./src/assets/icons/warning.png" alt="Warning">
-                </div>
-                <h3>1 pendente</h3>
-                <p>3 avisos</p>
-              </div>
-
-              <div class="data-item span2">
-                <div class="item-header">
-                  <p>Pressão</p>
-                  <img src="./src/assets/icons/web.png" alt="Web">
-                </div>
-                <h3>24</h3>
-                <p>24</p>
-              </div>
-
-              <div class="data-item span2">
-                <div class="item-header">
-                  <p>Altitude</p>
-                  <img src="./src/assets/icons/circuit.png" alt="Circuit">
-                </div>
-                <h3>4km</h3>
-                <p>Em relação ao nível do mar</p>
-              </div>
-
-              <div class="data-item span2">
-                <div class="item-header">
-                  <p>Direção do Vento</p>
-                  <img src="./src/assets/icons/wind-direction.png" alt="Wind">
-                </div>
-                <h3>175°</h3>
-                <p>Ventos à 175°</p>
-              </div>
             </div>
 
-            <div class="graphics">
-              <!-- GRÁFICO TEMPERATURA -->
-              <div class="chart-item span2">
-                <div class="item-header">
-                  <p>Temperatura &amp; umidade</p>
-                  <img src="./src/assets/icons/termometer.png" alt="Termômetro">
-                </div>
-                <p class="chart-sub">Média do campus · Últimas 6 horas</p>
-
-                <div class="chart-legend">
-                  <span style="--c:#22d3ee">Temperatura · °C</span>
-                  <span style="--c:#2563eb">Umidade · %</span>
-                </div>
-
-                <div class="chart-box">
-                  <canvas id="tempUmidChart"></canvas>
-                </div>
+            <!-- ATUADORES ATIVOS -->
+            <div class="card">
+              
+              <div class="card-header">
+                <p>Atuadores ativos</p>
+                <img src="./src/assets/icons/web.png" alt="web">
               </div>
 
-              <!-- GRÁFICO VELOCIDADE DO VENTO -->
-              <div class="chart-item span2">
-                <div class="item-header">
-                  <p>Velocidade do Vento</p>
-                  <img src="./src/assets/icons/wind.png" alt="Vento">
-                </div>
-                <p class="chart-sub">Tendência nas últimas 6 horas</p>
+              <h2>5 / 24</h2>
 
-                <div class="chart-legend">
-                  <span style="--c:#22d3ee">Série contínua</span>
-                  <span style="--c:#2563eb">Série tracejada</span>
-                </div>
+              <p>Sala principal - A/C ativo a 70%</p>
 
-                <div class="chart-box">
-                  <canvas id="windSpeedChart"></canvas>
-                </div>
-              </div>
-
-              <!-- GRÁFICO LUMINOSIDADE POR ZONA -->
-              <div class="chart-item span2">
-                <div class="item-header">
-                  <p>Luminosidade por Zona</p>
-                  <img src="./src/assets/icons/light.png" alt="Luminosidade">
-                </div>
-                <p class="chart-sub">Iluminância · Lux · Últimas 2 horas</p>
-
-                <div class="chart-box">
-                  <canvas id="luminosityChart"></canvas>
-                </div>
-              </div>
             </div>
 
-            <div class="devices-state">
-                <div class="devices-header">
-                  <h2>Estado do dispositivo</h2>
-                  <p>Tabela rápida · Últimos registros recebidos</p>
-                </div>
-                
-                <div class="info-container">
-                  <img src="./src/assets/icons/web.png" alt="Web">
-                  <div class="info-texts">
-                    <h3>Sala de Aula 101</h3>
-                    <p>Ex: 101 - Biblioteca</p>
-                  </div>
-                  <p>Agora</p>
-                </div>
-
-                <div class="data-container">
-                  <div class="data-column">
-                    <p>Temperatura</p>
-                    <h3>24,2°C</h3>
-                  </div>
-
-                  <div class="data-column">
-                    <p>Umidade</p>
-                    <h3>65%</h3>
-                  </div>
-
-                  <div class="data-column">
-                    <p>Wifi</p>
-                    <h3>-62 dBm</h3>
-                  </div>
-                </div>
+            <!-- MÉDIA DO CAMPUS -->
+            <div class="card">
+              
+              <div class="card-header">
+                <p>Média do Campus</p>
+                <img src="./src/assets/icons/termometer.png" alt="temperature">
               </div>
+
+              <h2>21,1 °C / 58%</h2>
+
+              <p>Temperatura/Umidade</p>
+
+            </div>
+
+            <!-- ALERTAS CRÍTICOS -->
+            <div class="card">
+              
+              <div class="card-header">
+                <p>Alertas críticos</p>
+                <img src="./src/assets/icons/warning.png" alt="warning">
+              </div>
+
+              <h2>1 Pendente</h2>
+
+              <p>3 avisos</p>
+
+            </div>
+          </div>
+
+          <div class="part2">
+
+            <!-- PRESSÃO -->
+            <div class="card">
+              
+              <div class="card-header">
+                <p>Pressão</p>
+                <img src="./src/assets/icons/pression.png" alt="pression">
+              </div>
+
+              <h2>24</h2>
+
+              <p>A pressão atual</p>
+
+            </div>
+
+            <!-- ALTITUDE -->
+            <div class="card">
+              
+              <div class="card-header">
+                <p>Altitude</p>
+                <img src="./src/assets/icons/circuit.png" alt="circuit">
+              </div>
+
+              <h2>4km</h2>
+
+              <p>Em relação ao nível do mar</p>
+
+            </div>
+
+            <!-- DIREÇÃO DO VENTO -->
+            <div class="card">
+              
+              <div class="card-header">
+                <p>Direção do Vento</p>
+                <img src="./src/assets/icons/wind-direction.png" alt="wind">
+              </div>
+
+              <h2>175°</h2>
+
+              <p>Ventos à 175°</p>
+
             </div>
           </div>
         </div>
+
+        <!-- GRAPHICS -->
+        <div class="graphics-container">
+          <div class="part1">
+
+          </div>
+          <div class="part2">
+
+          </div>
+        </div>
+
+        <!-- DEVICES STATE -->
+        <div class="devices-state">
+
+        </div>
+
       </section>
     </main>
 
@@ -296,6 +270,8 @@
         </a>
       </div>
     </nav>
+
+    <!-- <canvas id="tempUmidChart"></canvas>  -->
 
     <script type="module" src="./src/scripts/main.js"></script>
     <script type="module" src="./src/scripts/dom/sidebar.js"></script>

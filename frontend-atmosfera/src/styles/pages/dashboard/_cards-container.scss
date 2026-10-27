@@ -1,0 +1,42 @@
+@use "../../variables/index" as var;
+@use "../../components/index" as comp;
+@use "../../mixins/index" as mix;
+@use "../../responsivity/index" as resp;
+
+//MOBILE
+@media (min-width: resp.$mobile-breakpoint) {
+  section.dashboard {
+    div.cards-container{
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      div.part1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        place-items: center;
+      }
+      div.part2{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+      }
+    }
+  }
+}
+
+//DESKTOP
+@media (min-width: resp.$desktop-breakpoint){
+  section.dashboard {
+    div.cards-container{
+      div.part1{
+        grid-template-columns: repeat(4, 1fr);
+      }
+      div.part2{
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

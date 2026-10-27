@@ -3,9 +3,9 @@
 @use "../../mixins/index" as mix;
 @use "../../responsivity/index" as resp;
 
-@forward './campus-data';
+@forward './cards-container';
 @forward './devices-state';
-@forward './graphics';
+@forward './graphics-container';
 @forward './campus-header';
 
 @media (min-width: resp.$mobile-breakpoint) {
