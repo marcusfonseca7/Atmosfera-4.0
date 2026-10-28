@@ -117,7 +117,6 @@ body.simulation-page {
   gap: 10px;
   margin-top: 18px;
   padding: 8px 14px;
-  border-radius: 999px;
   background: rgba(8, 15, 31, 0.7);
   border: 1px solid rgba(120, 146, 180, 0.3);
 
@@ -663,6 +662,7 @@ body.simulation-page {
   }
 }
 
+/* CÓDIGO GERADO PELO COPILOT QUE ALTERA A NAV MOBILE
 .navbar-bottom-mobile {
   position: fixed;
   left: 0;
@@ -673,6 +673,7 @@ body.simulation-page {
   border-top: 1px solid rgba(124, 153, 202, 0.2);
   backdrop-filter: blur(6px);
 }
+*/
 
 .navbar-bottom-mobile-container {
   display: grid;
