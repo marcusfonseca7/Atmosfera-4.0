@@ -6,7 +6,106 @@
 @media (min-width: resp.$mobile-breakpoint) {
     section.dashboard {
         div.devices-state{
-            
+
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            height: 100%;
+            background: var.$gradient-bg-card;
+            padding: 20px;
+            border-radius: var.$radius-lg;
+            box-shadow: 0 10px 20px 0 rgba(0, 18, 34, 0.5);
+            @include mix.font-1();
+
+            div.devices-header{
+
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                width: 100%;
+
+                h2{
+                    color: var.$color-text-primary;
+                    font-weight: 800;
+                    font-size: 24px;
+                }
+                p{
+                    color: var.$color-text-secondary;
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+            }
+
+            div.device-info-container{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                div.img-text-container{
+                    @include mix.flex-center();
+                    gap: 14px;
+
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        padding: 4px;
+
+                    }
+                    div.info-text-container{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        h3{
+                            color: var.$color-text-primary;
+                            font-weight: 800;
+                            font-size: 18px;
+                        }
+                        p{
+                            color: var.$color-text-secondary;
+                            font-weight: 300;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                p{
+                    color: var.$primary;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            }
+
+            div.device-data-container{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                width: 100%;
+                padding: 20px;
+                background: var.$color-bg-control;
+                border-radius: var.$radius-lg;
+
+                div.data{
+                    @include mix.flex-center();
+                    flex-direction: column;
+                    gap: 8px;
+
+                    p{
+                        color: var.$color-text-secondary;
+                        font-weight: 300;
+                        font-size: 14px;
+                    }
+                    h3{
+                        color: var.$color-text-primary;
+                        font-weight: 800;
+                        font-size: 18px;
+                    }
+                }
+            }
         }
     }
 }
@@ -14,7 +113,55 @@
 @media (min-width: resp.$desktop-breakpoint) {
     section.dashboard {
         div.devices-state{
-            
+            gap: 28px;
+            padding: 24px;
+
+            div.devices-header{
+                h2{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+
+            div.device-info-container{
+                div.img-text-container{
+                    gap: 28px;
+
+                    img{
+                        width: 35px;
+                        height: 35px;
+                    }
+                    div.info-text-container{
+                        gap: 8px;
+
+                        h3{
+                            font-size: 22px;
+                        }
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                p{
+                    font-size: 16px;
+                }
+            }
+
+            div.device-data-container{
+                padding: 24px;
+
+                div.data{
+                    p{
+                        font-size: 16px;
+                    }
+                    h3{
+                        font-size: 22px;
+                    }
+                }
+            }
         }
     }
 }
