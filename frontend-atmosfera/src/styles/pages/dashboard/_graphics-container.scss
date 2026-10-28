@@ -6,13 +6,19 @@
 @media (min-width: resp.$mobile-breakpoint) {
   section.dashboard {
     div.graphics-container{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
       div.part1{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 16px;
       }
       div.part2{
-
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
       }
     }
   }
@@ -26,7 +32,11 @@
         grid-template-columns: repeat(5, 1fr);
       }
       div.part2{
+        grid-template-columns: repeat(2, 1fr);
 
+        div.graphic{
+          grid-column: span 1;
+        }
       }
     }
   }

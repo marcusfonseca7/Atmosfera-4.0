@@ -60,10 +60,12 @@
                 max-height: 220px;
                 max-width: 100%;
             }
+
+            p.graphic-footer{
+                color: var.$color-text-secondary;
+                font-size: 14px;
+            }
             
-        }
-        div.graphic.span3{
-            grid-column: span 1;
         }
     }
 }
