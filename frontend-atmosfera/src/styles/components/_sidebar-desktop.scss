@@ -8,6 +8,9 @@ div.sidebar-desktop {
 
 @media (min-width: resp.$desktop-breakpoint) {
   div.sidebar-desktop {
+
+    @include mix.anim-from-side(sibar-desktop-anim);
+
     display: flex;
     background: var.$color-bg-control;
     width: fit-content;

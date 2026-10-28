@@ -5,6 +5,9 @@
 //MOBILE
 @media (min-width: resp.$mobile-breakpoint) {
   header {
+
+    @include mix.anim-from-y(header-mobile-anim, 1s, -100px);
+
     position: fixed;
     color: var.$color-text-primary;
     display: flex;
@@ -32,6 +35,9 @@
     }
 
     #img_header {
+
+      @include mix.rotate-anim(header-mobile-menu-btn-anim, 1s, 180deg);
+
       height: 30px;
       width: 30px;
       transition: all 0.5s;

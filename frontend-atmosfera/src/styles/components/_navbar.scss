@@ -5,6 +5,9 @@
 //MOBILE
 @media (min-width: resp.$mobile-breakpoint) {
     nav.navbar-bottom-mobile{
+
+        @include mix.anim-from-y(navbar-mobile-anim);
+
         position: fixed;
         bottom: 0;
         width: 100%;

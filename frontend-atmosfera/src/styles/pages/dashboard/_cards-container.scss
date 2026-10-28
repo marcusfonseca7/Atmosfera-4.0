@@ -8,6 +8,8 @@
   section.dashboard {
     div.cards-container{
 
+      @include mix.anim-from-y(cards-anim);
+
       display: flex;
       flex-direction: column;
       gap: 16px;

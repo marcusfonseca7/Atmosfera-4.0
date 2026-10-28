@@ -1,0 +1,48 @@
+@mixin anim-from-side($anim-name, $time: 1s, $distance: -100px){
+    
+    animation: $anim-name $time ease forwards;
+
+    @keyframes #{$anim-name}
+    {
+        from{
+            transform: translateX($distance);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin anim-from-y($anim-name, $time: 1s, $distance: 100px){
+    
+    animation: $anim-name $time ease forwards;
+
+    @keyframes #{$anim-name}
+    {
+        from{
+            transform: translateY($distance);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin rotate-anim($anim-name, $time: 1s, $degress){
+    
+    animation: $anim-name $time ease forwards;
+
+    @keyframes #{$anim-name}
+    {
+        from{
+            transform: rotate($degress);
+        }
+        to{
+            transform: rotate(0);
+        }
+    }
+}
