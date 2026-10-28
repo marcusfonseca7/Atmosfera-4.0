@@ -230,7 +230,50 @@
         <!-- GRAPHICS -->
         <div class="graphics-container">
           <div class="part1">
+            
+            <!-- TEMPERATURA E UMIDADE -->
+            <div class="graphic span3">
 
+              <div class="graphic-header">
+                <h2>Temperatura & Umidade</h2>
+                <p>Média do campus - Últimas tualizações</p>
+              </div>
+
+              <div class="variables-container">
+                <div class="variable">
+                  <div class="ball"></div>
+                  <p>Temperatura - °C</p>
+                </div>
+                <div class="variable">
+                  <div class="ball"></div>
+                  <p>Umidade - %</p>
+                </div>
+              </div>
+
+              <canvas id="tempUmidChart"></canvas>
+            </div>
+
+            <!-- VELOCIDADE DO VENTO -->
+            <div class="graphic">
+
+              <div class="graphic-header">
+                <h2>Velocidade do Vento</h2>
+                <p>Tendências nas últimas horas</p>
+              </div>
+
+              <div class="variables-container">
+                <div class="variable">
+                  <div class="ball"></div>
+                  <p>Série contínua</p>
+                </div>
+                <div class="variable">
+                  <div class="ball"></div>
+                  <p>Série tracejada</p>
+                </div>
+              </div>
+
+              <canvas id="windSpeedChart"></canvas>
+            </div>
           </div>
           <div class="part2">
 
@@ -271,7 +314,6 @@
       </div>
     </nav>
 
-    <!-- <canvas id="tempUmidChart"></canvas>  -->
 
     <script type="module" src="./src/scripts/main.js"></script>
     <script type="module" src="./src/scripts/dom/sidebar.js"></script>

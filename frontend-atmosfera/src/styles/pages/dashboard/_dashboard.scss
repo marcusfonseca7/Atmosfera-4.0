@@ -17,13 +17,13 @@
     padding-bottom: 120px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 16px;
   }
 }
 
 //DESKTOP
 @media (min-width: resp.$desktop-breakpoint) {
   section.dashboard {
-    padding: 80px 100px 80px 312px + 100px;
+    padding: 80px 50px 80px 312px + 50px;
   }
 }

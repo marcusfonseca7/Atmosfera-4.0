@@ -5,8 +5,15 @@
 
 @media (min-width: resp.$mobile-breakpoint) {
   section.dashboard {
-    img{
-        width: 20px;
+    div.graphics-container{
+      div.part1{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+      }
+      div.part2{
+
+      }
     }
   }
 }
@@ -14,6 +21,13 @@
 //DESKTOP
 @media (min-width: resp.$desktop-breakpoint) {
   section.dashboard {
+    div.graphics-container{
+      div.part1{
+        grid-template-columns: repeat(5, 1fr);
+      }
+      div.part2{
 
+      }
+    }
   }
 }
