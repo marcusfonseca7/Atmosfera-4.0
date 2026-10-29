@@ -18,7 +18,6 @@ import java.nio.file.Path;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class Main {
@@ -61,7 +60,7 @@ public class Main {
         servidor.setExecutor(Executors.newFixedThreadPool(8));
         servidor.start();
 
-        System.out.printf("Banco conectado com sucesso !!!");
+        System.out.println("Banco conectado com sucesso !!!");
         System.out.println("ATMOSFERA SENAI http://localhost:" + PORTA);
         System.out.printf("precione Ctrl + C para encerrar ");
     }
