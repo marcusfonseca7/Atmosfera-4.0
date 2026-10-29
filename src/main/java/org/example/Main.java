@@ -88,7 +88,7 @@ public class Main {
 
             itemTratado.put("id", r.getIdRegistro());
             itemTratado.put("temperatura", r.getTemperatura() + "°C");
-            itemTratado.put("Umidade", r.getUmidade() +  "%");
+            itemTratado.put("umidade", r.getUmidade() +  "%");
 
 
 
@@ -98,7 +98,7 @@ public class Main {
                 }else {
                     itemTratado.put("statusTemperatura", "Estaveel");
                 }
-                itemTratado.put("Luminosidade", r.getLuminosidade());
+                itemTratado.put("luminosidade", r.getLuminosidade());
                  itemTratado.put("dispositivo", r.getIdDispositivoFk());
                 itemTratado.put("pressao", r.getPressao());
                 itemTratado.put("altitude", r.getAltitude());

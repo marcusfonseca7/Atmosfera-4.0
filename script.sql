@@ -45,13 +45,6 @@ VALUES ('Sensor 1', '-23.589800, -46.620500', 'GW', NULL),
        ('Sensor 3', '-23.589900, -46.620600', 'AMB', 1);
 
 
-INSERT INTO registros(temperatura, umidade, pressao, altitude, luminosidade, velocidade_vento, direcao_vento, intensidade_wifi, id_dispositivo_fk)
-VALUES
-    (24.5, 65.0, 1013.2, 850.0, 720.0, 2.5, 90, -45, 2),
-    (26.1, 58.5, 1011.8, 850.0, 850.0, 3.1, 120, -52, 3),
-    (23.8, 70.2, 1014.5, 850.0, 600.0, 1.8, 75, -40, 1);
-
-
 SELECT * FROM atuadores;
 SELECT * FROM dispositivos;
 
