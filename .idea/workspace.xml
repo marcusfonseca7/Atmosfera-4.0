@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9402eb10-15b5-4582-b82d-78e62f745ddb" name="Changes" comment="A classe main foi configurada com caminho do front e de arquivos.                        OQUE FALTA? criar metodo  que pega dados do front and no banco e devolver para o front para gerar os dashbord">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-atmosfera/src/scripts/pages/simulation.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-atmosfera/src/scripts/pages/simulation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +131,7 @@
       <workItem from="1792499361391" duration="8319000" />
       <workItem from="1792754470496" duration="7819000" />
       <workItem from="1793109934395" duration="2722000" />
-      <workItem from="1793272841848" duration="3253000" />
+      <workItem from="1793272841848" duration="5651000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <option name="closed" value="true" />

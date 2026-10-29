@@ -96,7 +96,7 @@ public class Main {
                 if (r.getTemperatura() > 30.0){
                     itemTratado.put("statusTemperatura", "Alerta: temperatura Alta!");
                 }else {
-                    itemTratado.put("statusTemperatura", "Estaveel");
+                    itemTratado.put("statusTemperatura", "Estável");
                 }
                 itemTratado.put("luminosidade", r.getLuminosidade());
                  itemTratado.put("dispositivo", r.getIdDispositivoFk());
@@ -129,6 +129,7 @@ public class Main {
         try {
             //le o corpo enviado do front (Json)
             InputStreamReader reader = new InputStreamReader(exchange.getRequestBody(), StandardCharsets.UTF_8);
+            System.out.println("CHEGOU");
 
             //converte  o JSon recebido  diretamente paara um Objeto da classe Registro o Gson
             Registro novoRegistro = GSON.fromJson(reader, Registro.class);
