@@ -166,7 +166,6 @@ function windowResized() {
   initNodes();
 }
 
-// Em módulos as funções não ficam no window; o p5 em modo global precisa delas lá
 window.setup = setup;
 window.draw = draw;
 window.windowResized = windowResized;

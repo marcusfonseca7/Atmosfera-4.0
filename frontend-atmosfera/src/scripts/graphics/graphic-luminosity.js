@@ -11,7 +11,7 @@
       { nome: 'Sala 101',    lux: 315 },
       { nome: 'Ginásio',     lux: 365 },
       { nome: 'Refeitório',  lux: 223 },
-      { nome: 'Pátio',       lux: 185 },
+      { nome: 'Pátio',       lux: 190},
     ],
 
     // --- EIXO Y ---
