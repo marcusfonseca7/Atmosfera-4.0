@@ -5,7 +5,7 @@
 //MOBILE
 @media (min-width: resp.$mobile-breakpoint) {
     nav.navbar-bottom-mobile{
-
+        z-index: 10;
         @include mix.anim-from-y(navbar-mobile-anim);
 
         position: fixed;

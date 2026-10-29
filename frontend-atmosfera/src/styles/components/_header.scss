@@ -7,7 +7,7 @@
   header {
 
     @include mix.anim-from-y(header-mobile-anim, 1s, -100px);
-
+    z-index: 10;
     position: fixed;
     color: var.$color-text-primary;
     display: flex;
