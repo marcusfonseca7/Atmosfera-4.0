@@ -52,25 +52,25 @@
             }
         }
         div.card.anim1{
-            @include mix.anim-from-y(cards-anim1, 0.5s, 100px);
+            @include mix.anim-from-y-rotate(cards-anim1, 0.5s, 100px, -60deg);
         }
         div.card.anim2{
-            @include mix.anim-from-y(cards-anim2, 1s, 100px);
+            @include mix.anim-from-y-rotate(cards-anim2, 1s, 100px, 60deg);
         }
         div.card.anim3{
-            @include mix.anim-from-y(cards-anim3, 1.5s, 100px);
+            @include mix.anim-from-y-rotate(cards-anim3, 1.5s, 100px, -60deg);
         }
         div.card.anim4{
-            @include mix.anim-from-y(cards-anim4, 2.0s, 100px);
+            @include mix.anim-from-y-rotate(cards-anim4, 2.0s, 100px, 60deg);
         }
         div.card.anim5{
-            @include mix.anim-from-y(cards-anim5, 2.5s, 100px);
+            @include mix.anim-from-y-rotate(cards-anim5, 2.5s, 100px, -60deg);
         }
         div.card.anim6{
-            @include mix.anim-from-y(cards-anim6, 3.0s, 100px);
+            @include mix.anim-from-y-rotate(cards-anim6, 3.0s, 100px, 60deg);
         }
         div.card.anim7{
-            @include mix.anim-from-y(cards-anim7, 3.5s, 100px);
+            @include mix.anim-from-y-rotate(cards-anim7, 3.5s, 100px, -60deg);
         }
     }
 }

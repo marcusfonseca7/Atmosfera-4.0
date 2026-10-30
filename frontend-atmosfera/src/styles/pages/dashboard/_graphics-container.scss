@@ -7,7 +7,7 @@
   section.dashboard {
     div.graphics-container{
 
-      @include mix.anim-from-side(graphics-anim, 1s, -100px);
+      @include mix.anim-from-side(graphics-anim, 3s, -100px);
 
       display: flex;
       flex-direction: column;

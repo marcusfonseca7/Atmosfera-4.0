@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atmosfera 4.0</title>
+
+    <!-- FONTS -->
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+
+      ::view-transition-group(favi) {
+        animation-duration: 2s;
+        animation-timing-function: ease;
+      }
+
+      ::view-transition-group(tit) {
+        animation-duration: 2s;
+        animation-timing-function: ease;
+      }
+
+      img.faviclass{
+        view-transition-name: favi;
+      }
+      h1.titleclass{
+        view-transition-name: tit;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- ATMOSFERA INTRO TRANSITION-->
+    <div class="intro-container">
+        <img src="/src/assets/images/favicon.png" id="intro_fav" alt="ATMOSFERA 4.0" class="faviclass"/>
+        <h1 class="titleclass" id="intro_title">ATMOSFERA 4.0</h1>
+    </div>
+
+    <!-- === HEADER MOBILE === -->
+    <header>
+      <a class="logo" href="../../index.html">
+        <img id="logo" src="/src/assets/images/favicon.png" />
+        <p>ATMOSFERA 4.0</p>
+      </a>
+
+      <img id="img_header" src="/src/assets/icons/menu.png" />
+    </header>
+
+    <!-- === SIDEBAR MOBILE === -->
+    <div class="sidebar closed" id="sidebar">
+      <a href="../../index.html">
+        <div class="sidebar-item active">
+          <img src="../../src/assets/icons/home.png alt="Início" />
+          <p>Dashboard</p>
+        </div>
+      </a>
+
+      <a href="./src/pages/simulacao.html">
+        <div class="sidebar-item">
+          <img src="../../src/assets/icons/simulation.png" alt="Simulação" />
+          <p>Simulação</p>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="sidebar-item">
+          <img src="../../src/assets/icons/us.png" alt="Sobre nós" />
+          <p>Sobre nós</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- === SIDEBAR DESKTOP === -->
+    <div class="sidebar-desktop">
+      <a class="logotype" href="../../index.html">
+        
+        <h1>ATMOSFERA 4.0</h1>
+      </a>
+
+      <div class="line"></div>
+
+      <div class="nav-container">
+        <a class="nav-item active" href="../../index.html">
+          <img src="../../src/assets/icons/home.png" alt="Home" />
+          <p>Dashboard</p>
+        </a>
+
+        <a class="nav-item" href="../../src/pages/simulacao.html">
+          <img src="../../src/assets/icons/simulation.png" alt="Simulação" />
+          <p>Simulação</p>
+        </a>
+
+        <a class="nav-item" href="">
+          <img src="../../src/assets/icons/us.png" alt="Sobre nós" />
+          <p>Sobre Nós</p>
+        </a>
+      </div>
+
+      <div class="connection-container">
+        <img src="../../src/assets/icons/wifi.png" alt="Wifi" />
+        <h2>Campus conectado</h2>
+        <p>Dispositivos conectados e online em tempo real.</p>
+      </div>
+    </div>
+
+    <main>
+      <section class="dashboard">
+
+        <!-- HEADER -->
+
+        <div class="campus-header">
+          <h2>Campus escolar inteligente</h2>
+          <p>Monitoramento ambiental - Tempo real</p>
+
+          <div class="filters-container">
+            
+            <div class="input-container">
+              <input type="text" placeholder="Digite o nome de um dispositivo..."/>
+              <img src="../../src/assets/icons/arrow.png" alt="->">
+            </div>
+
+            <div class="types-container">
+              <select name="device-type" id="device_type">
+                <option value="all">Todos os tipos</option>
+                <option value="pressure">Pressão</option>
+                <option value="altitude">Altitude</option>
+                <option value="wind-direction">Direção do Vento</option>
+                <option value="humidity">Umidade</option>
+                <option value="temperature">Temperatura</option>
+                <option value="wind-speed">Velocidade do Vento</option>
+                <option value="luminosity">Luminosidade</option>
+                <option value="wifi">Sinal WIFI</option>
+              </select>
+
+              <div class="real-time">Tempo Real</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- === BOTTOM NAVBAR MOBILE === -->
+    <nav class="navbar-bottom-mobile">
+      <div class="navbar-bottom-mobile-container">
+        <a href="../../index.html">
+          <div class="nav-item">
+            <img src="./src/assets/icons/home.png" alt="Início" />
+            <p>Dashboard</p>
+          </div>
+        </a>
+
+        <a href="../../src/pages/simulacao.html">
+          <div class="nav-item">
+            <img src="./src/assets/icons/simulation.png" alt="Simulação" />
+            <p>Simulação</p>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="nav-item">
+            <img src="../../src/assets/icons/us.png" alt="Sobre nós" />
+            <p>Sobre nós</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <!--INTRO-->
+    <script type="module" src="../../src/scripts/intro.js"></script>
+    <script type="module" src="../../src/scripts/main.js"></script>
+    <script type="module" src="../../src/scripts/dom/sidebar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <!--P5JS-->
+    <script type="module" src="../../src/scripts/p5js.js"></script>
+    <script type="module" src="../../src/scripts/database/db.js"></script>
+    <!--IMPORT DOS GRÁFICOS -->
+    <script type="module" src="../../src/scripts/graphics/graphics.js"></script>
+  </body>
+</html>

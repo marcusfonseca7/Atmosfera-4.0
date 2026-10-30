@@ -21,6 +21,24 @@
       @view-transition {
         navigation: auto;
       }
+
+      ::view-transition-group(favi) {
+        animation-duration: 2s;
+        animation-timing-function: ease;
+      }
+
+      ::view-transition-group(tit) {
+        animation-duration: 2s;
+        animation-timing-function: ease;
+      }
+
+      img.faviclass{
+        view-transition-name: favi;
+      }
+      h1.titleclass{
+        view-transition-name: tit;
+      }
+
     </style>
   </head>
   <body>
@@ -61,8 +79,8 @@
     <!-- === SIDEBAR DESKTOP === -->
     <div class="sidebar-desktop">
       <a class="logotype" href="./index.html">
-        <img src="./src/assets/images/favicon.png" alt="🌍" />
-        <h1>ATMOSFERA 4.0</h1>
+        <img src="./src/assets/images/favicon.png" alt="🌍" class="faviclass"/>
+        <h1 class="titleclass">ATMOSFERA 4.0</h1>
       </a>
 
       <div class="line"></div>
