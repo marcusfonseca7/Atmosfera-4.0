@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: resolve(root, 'index.html'),
         simulacao: resolve(root, 'src/pages/simulacao.html'),
+        intro: resolve(root, 'src/pages/intro.html'),
       },
     },
   },
