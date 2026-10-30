@@ -52,6 +52,14 @@
           }
         }
       }
+      div.sidebar-item.active{
+        background: var.$color-bg-selected;
+
+        img {
+          filter: brightness(0) saturate(100%) invert(26%) sepia(100%)
+            saturate(1529%) hue-rotate(199deg) brightness(110%) contrast(118%);
+        }
+      }
     }
   }
 
