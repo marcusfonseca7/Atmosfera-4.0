@@ -78,6 +78,15 @@ div.sidebar-desktop {
           }
         }
       }
+      a.nav-item.active{
+        background: var.$color-bg-selected;
+        img {
+          background: var.$color-primary;
+        }
+        p {
+          font-weight: 800;
+        }
+      }
     }
 
     div.connection-container {

@@ -6,6 +6,9 @@
 @media (min-width: resp.$mobile-breakpoint) {
   section.dashboard {
     div.graphics-container{
+
+      @include mix.anim-from-side(graphics-anim, 1s, -100px);
+
       display: flex;
       flex-direction: column;
       gap: 16px;

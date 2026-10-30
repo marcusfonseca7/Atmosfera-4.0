@@ -7,6 +7,8 @@
     section.dashboard {
         div.devices-state{
 
+            @include mix.anim-from-side(devices-anim, 2s, -100px);
+
             display: flex;
             flex-direction: column;
             align-items: start;
