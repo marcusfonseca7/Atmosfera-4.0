@@ -2,7 +2,13 @@ const STORAGE_KEY = 'atmosfera-simulation-panel-records';
 const SETTINGS_KEY = 'atmosfera-simulation-settings';
 
 const chartInstances = {};
-let dashboardRefreshInterval = null;
+const chartHistory = {
+  tempUmid: {
+    labels: [],
+    temperatura: [],
+    umidade: []
+  }
+};
 
 function readSimulationRecords() {
   try {
@@ -216,13 +222,50 @@ function createOrUpdateChart(chartKey, canvasId, config) {
   if (!canvas) return;
 
   if (!chartInstances[chartKey]) {
-    chartInstances[chartKey] = new Chart(canvas.getContext('2d'), buildChartConfig(config));
+    const chartConfig = buildChartConfig(config);
+    chartInstances[chartKey] = new Chart(canvas.getContext('2d'), chartConfig);
     return;
   }
 
-  chartInstances[chartKey].data.labels = config.labels;
-  chartInstances[chartKey].data.datasets = config.datasets;
-  chartInstances[chartKey].update();
+  const chart = chartInstances[chartKey];
+  const nextLabels = Array.isArray(config.labels) ? config.labels : [];
+  const nextDatasets = Array.isArray(config.datasets) ? config.datasets : [];
+
+  chart.data.labels = nextLabels;
+
+  if (!chart.data.datasets.length) {
+    chart.data.datasets = nextDatasets.map((dataset) => ({ ...dataset, data: [...dataset.data] }));
+  } else {
+    nextDatasets.forEach((nextDataset, index) => {
+      const currentDataset = chart.data.datasets[index];
+      if (!currentDataset) {
+        chart.data.datasets[index] = { ...nextDataset, data: [...nextDataset.data] };
+        return;
+      }
+
+      currentDataset.label = nextDataset.label;
+      currentDataset.data = [...nextDataset.data];
+      currentDataset.borderColor = nextDataset.borderColor;
+      currentDataset.backgroundColor = nextDataset.backgroundColor;
+      currentDataset.borderWidth = nextDataset.borderWidth;
+      currentDataset.tension = nextDataset.tension;
+      currentDataset.fill = nextDataset.fill;
+      currentDataset.borderDash = nextDataset.borderDash;
+      currentDataset.pointRadius = nextDataset.pointRadius ?? currentDataset.pointRadius;
+      currentDataset.pointHoverRadius = nextDataset.pointHoverRadius ?? currentDataset.pointHoverRadius;
+    });
+  }
+
+  while (chart.data.datasets.length > nextDatasets.length) {
+    chart.data.datasets.pop();
+  }
+
+  chart.options.animation = {
+    duration: 700,
+    easing: 'easeOutQuart'
+  };
+
+  chart.update('active');
 }
 
 function buildTimeLabels(data) {
@@ -232,29 +275,65 @@ function buildTimeLabels(data) {
   });
 }
 
+function getChartHistory(chartKey, fallback = { labels: [], datasets: [] }) {
+  if (!chartHistory[chartKey]) {
+    chartHistory[chartKey] = JSON.parse(JSON.stringify(fallback));
+  }
+  return chartHistory[chartKey];
+}
+
 function renderTemperatureAndHumidityChart(records) {
-  const data = records.slice(-6);
-  const labels = buildTimeLabels(data);
+  const config = window.ATMOSFERA_CHARTS?.temperature || {
+    temperatura: { label: 'Temperatura', cor: '#22d3ee', areaCorTopo: 'rgba(34, 211, 238, 0.18)', areaCorBase: 'rgba(34, 211, 238, 0.06)' },
+    umidade: { label: 'Umidade', cor: '#2563eb', tracejado: [8, 6] },
+    visual: { espessuraLinha: 3, suavizacao: 0.3, corTexto: '#8d9bb8', corGrade: 'rgba(148,163,184,.15)' },
+    tooltip: { fundo: '#0b1636', borda: '#1d4ed8', corTitulo: '#fff', corTexto: '#a9b5cf' }
+  };
+
+  const history = chartHistory.tempUmid;
+  const latestRecord = records.at(-1);
+
+  if (latestRecord) {
+    const nextLabel = buildTimeLabels([latestRecord])[0];
+    const nextTemp = normalizeNumber(latestRecord.values?.temperatura, 0);
+    const nextUmid = normalizeNumber(latestRecord.values?.umidade, 0);
+
+    if (!history.labels.length || history.labels.at(-1) !== nextLabel) {
+      history.labels.push(nextLabel);
+      history.temperatura.push(nextTemp);
+      history.umidade.push(nextUmid);
+    }
+
+    while (history.labels.length > 6) {
+      history.labels.shift();
+      history.temperatura.shift();
+      history.umidade.shift();
+    }
+  }
+
+  const labels = history.labels.length ? history.labels : buildTimeLabels(records.slice(-6));
+  const tempValues = history.temperatura.length ? history.temperatura : records.slice(-6).map((record) => normalizeNumber(record.values?.temperatura, 0));
+  const umidValues = history.umidade.length ? history.umidade : records.slice(-6).map((record) => normalizeNumber(record.values?.umidade, 0));
 
   const datasets = [
     {
-      label: 'Temperatura',
-      data: data.map((record) => normalizeNumber(record.values?.temperatura, 0)),
-      borderColor: '#22d3ee',
+      label: config.temperatura.label,
+      data: tempValues,
+      borderColor: config.temperatura.cor,
       backgroundColor: 'rgba(34, 211, 238, 0.18)',
-      borderWidth: 3,
-      tension: 0.3,
+      borderWidth: config.visual.espessuraLinha,
+      tension: config.visual.suavizacao,
       fill: true
     },
     {
-      label: 'Umidade',
-      data: data.map((record) => normalizeNumber(record.values?.umidade, 0)),
-      borderColor: '#2563eb',
+      label: config.umidade.label,
+      data: umidValues,
+      borderColor: config.umidade.cor,
       backgroundColor: 'rgba(37, 99, 235, 0.12)',
-      borderWidth: 3,
-      tension: 0.3,
+      borderWidth: config.visual.espessuraLinha,
+      tension: config.visual.suavizacao,
       fill: false,
-      borderDash: [8, 6]
+      borderDash: config.umidade.tracejado || []
     }
   ];
 

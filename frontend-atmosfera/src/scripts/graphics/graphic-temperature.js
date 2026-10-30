@@ -18,7 +18,7 @@ const CONFIG = {
     min: 0,
     max: 40,
     passo: 10,       // intervalo entre os números do eixo
-    cor: '#22d3ee',
+    cor: '#ee2222',
     areaCorTopo: 'rgba(37,99,235,.55)',   // degradê da área
     areaCorBase: 'rgba(37,99,235,.05)',
     preencher: true, // false = sem área colorida
@@ -53,11 +53,6 @@ const CONFIG = {
     corTexto: '#a9b5cf',
   },
 };
-
-/* ============================================================
-   DADOS (hora, temperatura, umidade)
-   Troque por dados da API quando tiver
-   ============================================================ */
 const leituras = [
   { hora: 1, temp: 18,   umid: 50   },
   { hora: 2, temp: 25,   umid: 34   },
@@ -157,3 +152,9 @@ new Chart(ctx, {
     }
   }
 });
+
+window.ATMOSFERA_CHARTS = window.ATMOSFERA_CHARTS || {};
+window.ATMOSFERA_CHARTS.temperature = CONFIG;
+
+// O gráfico principal é controlado em src/scripts/database/db.js.
+// Isso evita que o mesmo canvas seja recriado e cause flicker na linha em tempo real.
