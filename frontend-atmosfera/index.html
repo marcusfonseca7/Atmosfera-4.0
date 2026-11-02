@@ -59,24 +59,31 @@
 
     <!-- === SIDEBAR MOBILE === -->
     <div class="sidebar closed" id="sidebar">
-      <a href="./index.html">
+      <a href="./index.html" id="dashboard_btn">
         <div class="sidebar-item active">
           <img src="./src/assets/icons/home.png" alt="Início" />
           <p>Dashboard</p>
         </div>
       </a>
 
-      <a href="./src/pages/simulacao.html">
+      <a href="./src/pages/simulacao.html" id="simulation_btn">
         <div class="sidebar-item">
           <img src="./src/assets/icons/simulation.png" alt="Simulação" />
           <p>Simulação</p>
         </div>
       </a>
 
-      <a href="">
+      <a href="" id="about_btn">
         <div class="sidebar-item">
           <img src="./src/assets/icons/us.png" alt="Sobre nós" />
           <p>Sobre nós</p>
+        </div>
+      </a>
+
+      <a id="chatbot_btn">
+        <div class="sidebar-item">
+          <img src="./src/assets/icons/bot.png" alt="Chatbot" />
+          <p>Chatbot</p>
         </div>
       </a>
     </div>
@@ -115,21 +122,28 @@
     </div>
 
     <!-- === BOT SIDEBAR === -->
-    <div class="bot-sidebar">
+    <div class="bot-sidebar closed" id="bot_sidebar">
       <div class="bot-header">
         <div class="texts-container">
           <h2>Chat com o bot</h2>
           <p>Suporte e monitoramento do campus</p>
         </div>
-        <button>X</button>
-      </div>
-
-      <div class="bot-profile-container">
-        <img src="./src/assets/icons/bot.png" alt="Bot image">
-        <p>Online</p>
+        <button id="chatbot_close_btn">X</button>
       </div>
 
       <div class="chat-container">
+        <p class="user-message">Oi, tudo bem?</p>
+        <p class="bot-message">Olá! Tudo bem, e você? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel ipsa ex neque porro rem commodi, cumque rerum suscipit sed voluptas, illum deserunt nesciunt velit consequuntur soluta quos amet? Natus, nemo.</p>
+        <p class="user-message">Oi, tudo bem? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, nihil! Voluptate, nostrum maxime. Exercitationem dolor molestias esse labore iste, pariatur deleniti. Consectetur delectus, commodi necessitatibus recusandae dolor praesentium voluptatem sapiente?</p>
+        <p class="bot-message">Olá! Tudo bem, e você?</p>
+        <p class="user-message">Oi, tudo bem?</p>
+        <p class="bot-message">Olá! Tudo bem, e você?</p>
+        <p class="user-message">Oi, tudo bem?</p>
+        <p class="bot-message">Olá! Tudo bem, e você?</p>
+        <p class="user-message">Oi, tudo bem?</p>
+        <p class="bot-message">Olá! Tudo bem, e você?</p>
+        <p class="user-message">Oi, tudo bem?</p>
+        <p class="bot-message">Olá! Tudo bem, e você?</p>
         <p class="user-message">Oi, tudo bem?</p>
         <p class="bot-message">Olá! Tudo bem, e você?</p>
       </div>
@@ -141,7 +155,7 @@
     </div>
 
     <!-- CHATBOT BUTTON -->
-    <img src="./src/assets/icons/bot.png" alt="Chat bot button" class="chatbot-button">
+    <img src="./src/assets/icons/bot.png" alt="Chat bot button" class="chatbot-button" id="chatbot_open_btn">
 
     <main>
       <section class="dashboard">
@@ -439,5 +453,7 @@
     <script type="module" src="./src/scripts/database/db.js"></script>
     <!--IMPORT DOS GRÁFICOS -->
     <script type="module" src="./src/scripts/graphics/graphics.js"></script>
+    <!--CHATBOT-->
+    <script type="module" src="./src/scripts/dom/chatbot-sidebar.js"></script>
   </body>
 </html>
