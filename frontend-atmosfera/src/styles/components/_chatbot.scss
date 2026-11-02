@@ -1,0 +1,164 @@
+@use "../variables/index" as var;
+@use "../mixins/index" as mix;
+@use "../responsivity/index" as resp;
+
+//MOBILE
+@media (min-width: resp.$mobile-breakpoint) {
+    div.bot-sidebar{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 95%;
+        height: 100%;
+        max-width: 500px;
+        z-index: 1000;
+        opacity: 0.975;
+        padding: 50px 30px;
+        background: var.$color-bg-control;
+
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        div.bot-header{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div.texts-container{
+                h2{
+                    font-size: 26px;
+                    @include mix.font-1();
+                    font-weight: 550;
+                    color: var.$color-text-primary;
+                }
+                p{
+                    font-size: 14px;
+                    @include mix.font-1();
+                    color: var.$color-text-primary;
+                }
+            }
+            button{
+                width: 35px;
+                height: 35px;
+                padding: 12px;
+                @include mix.flex-center();
+                border-radius: 50%;
+                border: 1px solid var.$color-border-default;
+                background: var.$color-bg-network;
+                color: var.$color-text-primary;
+                transition: 0.3s ease;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+                &:active{
+                    transform: scale(0.9);
+                }
+            }
+
+        }
+
+        div.bot-profile-container{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            img{
+                width: 45px;
+                background: var.$primary;
+                padding: 8px;
+                border-radius: 50%;
+            }
+            p{
+                @include mix.font-1();
+                color: var.$color-accent;
+                border: 1px solid var.$color-accent;
+                padding: 5px 16px;
+                border-radius: 50px;
+            }
+        }
+
+        div.chat-container{
+
+            border: 2px solid var.$color-border-default;
+            border-radius: var.$radius-lg; 
+            height: 100%;
+            padding: 26px 14px;
+            @include mix.font-1();
+            color: var.$color-text-primary;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            p{
+                background: var.$color-bg-network;
+                width: fit-content;
+                padding: 10px 16px;
+                border-radius: var.$radius-lg;
+                font-size: 14px;
+            }
+
+            p.user-message{
+                text-align: right;
+                margin-left: auto;
+            }
+            p.bot-message{
+                text-align: left;
+                margin-right: auto;
+            }
+        }
+
+        div.input-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid var.$color-border-default;
+            border-radius: var.$radius-lg;
+            input{
+                padding: 18px 14px; 
+                border-radius: var.$radius-lg;
+                width: 100%;
+                background: transparent;
+                border: none;
+                color: var.$color-text-primary;
+            }
+            img{
+                width: 30px;
+            }
+        }
+    }
+
+    img.chatbot-button{
+        position: fixed;
+        right: 100px;
+        bottom: 70px;
+        width: 60px;
+        z-index: 999;
+        background: var.$primary;
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px var.$primary;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.3s ease;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+        &:active{
+            transform: scale(0.9);
+        }
+    }
+}
+
+//DESKTOP
+@media (min-width: resp.$desktop-breakpoint) {
+    div.bot-sidebar{
+
+    }
+    
+    img.chatbot-button{
+
+    }
+}
