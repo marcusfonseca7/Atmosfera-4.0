@@ -125,32 +125,19 @@
     <div class="bot-sidebar closed" id="bot_sidebar">
       <div class="bot-header">
         <div class="texts-container">
-          <h2>Chat com o bot</h2>
+          <h2>Lukinhas Bot</h2>
           <p>Suporte e monitoramento do campus</p>
         </div>
         <button id="chatbot_close_btn">X</button>
       </div>
 
-      <div class="chat-container">
-        <p class="user-message">Oi, tudo bem?</p>
-        <p class="bot-message">Olá! Tudo bem, e você? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel ipsa ex neque porro rem commodi, cumque rerum suscipit sed voluptas, illum deserunt nesciunt velit consequuntur soluta quos amet? Natus, nemo.</p>
-        <p class="user-message">Oi, tudo bem? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, nihil! Voluptate, nostrum maxime. Exercitationem dolor molestias esse labore iste, pariatur deleniti. Consectetur delectus, commodi necessitatibus recusandae dolor praesentium voluptatem sapiente?</p>
-        <p class="bot-message">Olá! Tudo bem, e você?</p>
-        <p class="user-message">Oi, tudo bem?</p>
-        <p class="bot-message">Olá! Tudo bem, e você?</p>
-        <p class="user-message">Oi, tudo bem?</p>
-        <p class="bot-message">Olá! Tudo bem, e você?</p>
-        <p class="user-message">Oi, tudo bem?</p>
-        <p class="bot-message">Olá! Tudo bem, e você?</p>
-        <p class="user-message">Oi, tudo bem?</p>
-        <p class="bot-message">Olá! Tudo bem, e você?</p>
-        <p class="user-message">Oi, tudo bem?</p>
-        <p class="bot-message">Olá! Tudo bem, e você?</p>
+      <div class="chat-container" id="bot_chat_container">
+
       </div>
 
       <div class="input-container">
-        <input type="text">
-        <img src="./src/assets/icons/arrow.png" alt="Arrow">
+        <input type="text" id="prompt_input">
+        <img src="./src/assets/icons/arrow.png" alt="Arrow" id="send_prompt_btn">
       </div>
     </div>
 
@@ -453,7 +440,8 @@
     <script type="module" src="./src/scripts/database/db.js"></script>
     <!--IMPORT DOS GRÁFICOS -->
     <script type="module" src="./src/scripts/graphics/graphics.js"></script>
-    <!--CHATBOT-->
+    <!--LUKINHAS-->
     <script type="module" src="./src/scripts/dom/chatbot-sidebar.js"></script>
+    <script type="module" src="./src/scripts/lukinhas/lukinhas.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+//Só Deus entende isso aqui, boa sorte.
+
 //id da temperatura
 const tempMin = document.getElementById("temp-min");
 const tempMax = document.getElementById("temp-max");
