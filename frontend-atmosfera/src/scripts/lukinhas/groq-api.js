@@ -1,4 +1,4 @@
-import Groq from "https://esm.sh/groq-sdk";
+import Groq from "groq-sdk";
 
 export async function getResponseFromGroq(messages, MODEL, GROQ_API_KEY) {
     if (!GROQ_API_KEY) {

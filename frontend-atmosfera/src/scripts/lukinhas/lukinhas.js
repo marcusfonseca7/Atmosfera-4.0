@@ -1,7 +1,7 @@
 import { getResponseFromGroq } from './groq-api';
 
 //API Configs
-const GROQ_API_KEY = "";
+const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 const MODEL = "openai/gpt-oss-120b";
 
 //Elements
@@ -14,7 +14,7 @@ const personality =
 {
     role: "system", 
     content: 
-        "Você se chama Lukinhas e fala português Brasil. " +
+        "Você se chama Murilinho e fala português Brasil. " +
         "Nunca formate suas respostas em markdown." +
         "Você é um assistente de um dashboard de uma estação metereológica" +
         "Localidade: SENAI Conectividade Anchieta Vila Mariana" +

@@ -1,3 +1,4 @@
+import Chart from 'chart.js/auto';
 const STORAGE_KEY = 'atmosfera-simulation-panel-records';
 const SETTINGS_KEY = 'atmosfera-simulation-settings';
 
