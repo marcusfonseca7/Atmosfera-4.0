@@ -1,6 +1,8 @@
 const STORAGE_KEY = 'atmosfera-simulation-panel-records';
 const SETTINGS_KEY = 'atmosfera-simulation-settings';
 
+let dashboardRefreshInterval = null;
+
 const chartInstances = {};
 const chartHistory = {
   tempUmid: {
